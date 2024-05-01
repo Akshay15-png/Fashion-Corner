@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+
+    <link rel="stylesheet" href="./css/index-global.css" />
+    <link rel="stylesheet" href="./css/contact.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Mplus 1p:wght@400;500&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500&display=swap"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM Serif Display:wght@400&display=swap"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lobster:wght@400&display=swap"/>
+
+    <!-- including jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="./js/home-slider.js"></script>
+    <script src="./js/clothes_click.js"></script>
+
+    <style>
+      @font-face {
+        font-family: "Mplus 1p Bold";
+        src: url("./assets/mplus-1p-bold.ttf");
+        font-weight: 700;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="index-page">
+      
+      <!-- nav bar -->
+      <section class="nav-bar" id="nav-bar">
+        <nav class="nav-options" id="nav-links">
+          <button class="hover-functioning">
+            <a href="index.html" class="home home-links">Home</a>
+          </button>
+
+          <button class="hover-functioning1">
+            <a href="about.html" class="about home-links">About</a>
+          </button>
+
+          <button class="hover-functioning2">
+            <div class="dropdown">
+              <a href="#" class="clothes home-links" onclick="toggleDropdown()">Clothes</a>
+              <div id="dropdown-content" class="dropdown-content">
+                <a href="men.html" class="home-links clothes-sublink">Men</a>
+                <a href="women.html" class="home-links clothes-sublink">Women</a>
+              </div>
+            </div>
+          </button>
+
+          <button class="hover-functioning3">
+            <a href="contact.html" class="contact-us home-links">Contact</a>
+          </button>
+
+          <button class="hover-functioning4">
+            <a href="login.html" target="_blank" class="login home-links">Sign Up</a>
+          </button>
+        </nav>
+        <a href="index.html">
+          <img class="fashion-corner-1-1" alt="logo" src="./assets/fashion-corner-1-1@2x.png"/>
+        </a>
+      </section>
+      
+     <!-- main -->
+     <main class="contacts-us">
+        <section>
+        <section class="description">
+          <div class="when-you-contact-container">
+            <p class="when-you-contact-customer-serv"><br><br><br><br><br><br><br>
+              When you contact Customer Service your personal data will be
+              processed in accordance with our 
+              <a class="privacy-notice" href="./privacy_policy.html" target="_blank" >
+                <span class="privacy-notice1">Privacy Notice</span> </a>.
+            </p>
+            <p class="when-you-contact-customer-serv"> </p>
+            <p class="when-you-contact-customer-serv">
+              All product returns come at an environmental cost and each
+              returned package leaves a significant trail of emissions. Fashion
+              Corner encourages you to be a contributor towards climate positive
+              fashion. Kindly refer to our product details and size guide to
+              avoid inconvenience of returns.
+            </p>
+          </div>
+          <div class="contact-info">
+            <p class="when-you-contact-customer-serv">
+              <span
+                >You can chat with our Virtual assistant 24/7 for answers to
+                frequently asked questions. You’ll be put through to a live
+                agent if you need more help, during below opening hours.</span
+              >
+              <b class="call-us">&nbsp;</b>
+            </p>
+            <br><br><br><br><br>
+                <div class="border-for-details">
+                    <p class="when-you-contact-customer-serv" >
+                    <b class="call-us">Call us</b>
+                    <div> 1234-567-8910 <div style="font-size:20px;"> Free of charge</div></div>
+                    </p>
+                    <p class="when-you-contact-customer-serv">&nbsp;</p>
+                    <p class="opening-hours">
+                    <b>Opening Hours</b>
+                    </p>
+                    <p class="when-you-contact-customer-serv">
+                    <b>&nbsp;</b>
+                    </p>
+                    <p class="when-you-contact-customer-serv">
+                    <b>Phone</b>
+                    <div>Monday – Sunday: 8.00 – 22.00</div>
+                    </p>
+                    <p class="when-you-contact-customer-serv">
+                    <b class="call-us">Chat</b>
+                    <div>Monday – Sunday: 8.00 – 22.00</div>
+                    <b>  </b>
+                    </p>
+                    <p class="opening-hours">
+                    <b>Email</b>
+                    </p><br>
+                    <p class="when-you-contact-customer-serv">fashioncorner@telegmail.com</p>
+                </div>
+          </div>
+        </section>
+        
+        <!-- return order section -->
+        <div class="return-order" >
+          <div class="return-order-child"></div>
+          <button class="return-order-button" onclick="alert(document.domain)">
+            <div class="return-order-item"></div>
+            <b class="return2">Return</b>
+          </button>
+          <div class="register-returns-easily-container">
+            <p class="when-you-contact-customer-serv">
+              Register returns easily online. All you need is the order number
+              found in the order confirmation email, and the email address used
+              when placing your order.
+            </p>
+            <p class="when-you-contact-customer-serv">&nbsp;</p>
+            <p class="when-you-contact-customer-serv">
+              The return request must be raised with us within 15 days from the
+              date you receive your parcel
+            </p>
+          </div>
+          <b class="i-want-to">I WANT TO RETURN SOMETHING</b>
+          <img class="return-icon" alt="" src="./assets/return@2x.png" />
+        </div>
+
+        <!-- track order section -->
+        <div class="track-order" >
+          <div class="return-order-child"></div>
+          <button class="track-order-button" onclick="alert(document.domain)">
+            <div class="track-order-item"></div>
+            <b class="track-order1">Track Order</b>
+          </button>
+          
+          <div class="track-order-inner"></div>
+
+          <div class="">
+            <input class="subscribe-us-child eg-312657432980" type="text" placeholder="e.g. 312657432980"/>
+          </div>
+
+          <div class="order-no-container">
+            <span>Order No. </span>
+            <span class="span">*</span>
+          </div>
+          <div class="enter-the-order">
+            Enter the order number found in the order confirmation email
+          </div>
+          <b class="i-want-to1">I WANT TO KNOW WHERE MY ORDER IS</b>
+          <img class="location-icon" alt="" src="./assets/location@2x.png" />
+        </div>
+        
+        <section class="headings1">
+          <h1 class="second-heading1">
+            <p class="when-you-contact-customer-serv">
+              How can we help you today?
+            </p>
+          </h1>
+          <h1 class="heading4">WE’D LOVE TO HEAR FROM YOU</h1>
+        </section>
+        <img class="start-line-icon4" alt="" src="./assets/start-line@2x.png" />
+      </main>
+      
+      <!-- subscribe -->
+      <section class="subscribe">
+        <div class="subscribe-us">
+          <div class="by-subscribing-you">
+            By subscribing, you agree to our Privacy Policy and consent to
+            receive updates from us.
+          </div>
+          <button class="button " onclick="alert(document.domain)">
+            <div class="sign-up">Sign Up</div>
+          </button>
+          <input class="subscribe-us-child" type="text" placeholder="Enter your email"/>
+          <div class="join-our-mailing">
+            Join our mailing list for the latest updates and promotions.
+          </div>
+          <div class="subscribe1">Subscribe</div>
+        </div>
+        <div class="links1">
+          <div class="links2">
+            
+            <a href="login.html" target="_blank" class="customer-login1 subscribe-links">Customer Login</a>
+            <a href="contact.html" id="contact" class="contact subscribe-links">Contact</a>
+            <a href="women.html" id="womens" class="womens subscribe-links">Women</a>
+            <a href="men.html" id="mens" class="mens subscribe-links">Men</a>
+            <a href="about.html" id="about-us" class="about-us subscribe-links">About Us</a>
+          </div>
+          <div class="fashion-corner">Fashion Corner</div>
+        </div>
+        <a href="index.html">
+          <img class="logo-icon" alt="" src="./assets/logo@2x.png" />
+        </a>
+        
+        <img class="subscribe-child" alt="" src="./assets/line-3@2x.png" />
+      </section>
+
+      <!-- footer -->
+      <footer class="footer">
+        <div class="social-media-parent social-media-icon">
+          <div class="social-media">
+            
+            <a href="https://twitter.com/akshaydaisuke?lang=en" target="_blank">
+              <img class="twitter-icon" alt="twitter-logo" src="./assets/ellipse-4@2x.png"/>
+            </a>
+            <a href="https://www.instagram.com/akshay212046/" target="_blank">
+              <img class="insta-icon" alt="" src="./assets/ellipse-3@2x.png" />
+            </a>
+            <a href="https://www.facebook.com" target="_blank">
+              <img class="facebook-icon" alt="" src="./assets/ellipse-2@2x.png"/>
+            </a>
+            <a href="mailto:fashioncorner@telegmail.com" target="_blank">
+              <img class="email-icon" alt="" src="./assets/ellipse-1@2x.png" />
+            </a>
+
+          </div>
+        </div>
+
+        <div class="footer-links">
+          <div class="links">
+            <div class="cookie-policy">
+              <a id="cookie-policies" href="./privacy_policy.html"> Cookie Policy </a>
+            </div>
+            <div class="terms-of-service">
+              <a id="terms-conditions" href="./privacy_policy.html"> Terms of Service </a>
+            </div>
+            <div class="privacy-policy">
+              <a id="privacy-policies" href="./privacy_policy.html"> Privacy Policy </a>
+            </div>
+          </div>
+          <div class="tailor-shop-all">
+            © 2024 Fashion Corner. All rights reserved.
+          </div>
+        </div>
+        <img class="footer-child" alt="" src="./assets/line-2@2x.png" />
+        
+        <img class="subscribe-child" alt="" src="./assets/line-3@2x.png" style="padding-left: 75px;" />
+      </footer>  
+    </div>
+    
+  </body>
+</html>
+    

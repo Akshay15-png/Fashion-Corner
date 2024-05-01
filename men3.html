@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+
+    <!-- <link rel="stylesheet" href="./css/global.css" /> -->
+    <link rel="stylesheet" href="./css/men.css" />
+    <link rel="stylesheet" href="./css/index-global.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Mplus 1p:wght@400;500&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500&display=swap"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM Serif Display:wght@400&display=swap"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lobster:wght@400&display=swap"/>
+
+    <!-- including jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="./js/clothes_click.js"></script>
+
+    <style>
+      @font-face {
+        font-family: "Mplus 1p Bold";
+        src: url("./assets/mplus-1p-bold.ttf");
+        font-weight: 700;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="index-page">
+           
+      <!-- discount code -->
+      <header class="discount-bar" id="discount-bar" data-animate-on-scroll>
+        <div class="discount-bar-child"></div>
+        <div class="save-upto-499-">SAVE UPTO 499/- | USE CODE Fashion2024</div>
+      </header>
+      
+      <!-- nav bar -->
+      <section class="nav-bar" id="nav-bar">
+        <nav class="nav-options" id="nav-links">
+          <button class="hover-functioning">
+            <a href="index.html" class="home home-links">Home</a>
+          </button>
+
+          <button class="hover-functioning1">
+            <a href="about.html" class="about home-links">About</a>
+          </button>
+
+          <button class="hover-functioning2">
+            <div class="dropdown">
+              <a href="#" class="clothes home-links" onclick="toggleDropdown()">Clothes</a>
+              <div id="dropdown-content" class="dropdown-content">
+                <a href="men.html" class="home-links clothes-sublink">Men</a>
+                <a href="women.html" class="home-links clothes-sublink">Women</a>
+              </div>
+            </div>
+          </button>
+
+          <button class="hover-functioning3">
+            <a href="contact.html" class="contact-us home-links">Contact</a>
+          </button>
+
+          <button class="hover-functioning4">
+            <a href="login.html" target="_blank" class="login home-links">Sign Up</a>
+          </button>
+        </nav>
+        <a href="index.html">
+          <img class="fashion-corner-1-1" alt="logo" src="./assets/fashion-corner-1-1@2x.png"/>
+        </a>
+
+        <img class="start-line-icon4" alt="" src="./assets/start-line@2x.png" />
+      </section>
+
+      <!-- clothes-section -->
+      <section class="clothes-pic1">
+        <div class="products">
+          
+          <div class="product-61">
+            <img class="price-for-photo-61" alt="" src="./assets/men-3-product-6.PNG" />
+            <img class="photo6-icon1" alt="" src="./assets/1_3cbdee39-0021-443f-bbd1-64ea279bb79b.jpg" />
+          </div>
+
+          <div class="product-51">
+            <img class="price-for-photo-51" alt="" src="./assets/men-3-product-5.PNG" />
+            <img class="photo5-icon1" alt="" src="./assets/1_78af4c6e-09f1-4e84-a45d-b763f34ad142.jpg" />
+          </div>
+
+          <div class="product-41">
+            <img class="price-for-photo-41" alt="" src="./assets/men-3-product-4.PNG" />
+            <img class="photo6-icon1" alt="" src="./assets/1_a7148cc9-b352-45fe-adc9-0ac63fe15151.jpg" />
+          </div>
+
+          <div class="product-31">
+            <img class="price-for-photo-31" alt="" src="./assets/men-3-product-3.PNG"/>
+            <img class="photo3-icon1" alt="" src="./assets/1_9577d097-4ce3-46ed-8549-364566b8b00a.jpg" />
+          </div>
+
+          <div class="product-21">
+            <img class="price-for-photo-21" alt=""src="./assets/men-3-product-2.PNG"/>
+            <img class="photo2-icon1" alt="" src="./assets/1_5d3f3998-b8ba-40bd-871c-119bd526147b.jpg" />
+          </div>
+
+          <div class="product-11">
+            <img class="price-for-photo1" alt="" src="./assets/men-3-product-1.PNG"/>
+            <img class="photo6-icon1" alt="" src="./assets/4_cb53edd8-af8b-47c3-b1f4-2c7dfb32c723.jpg" />
+          </div>
+
+        </div>
+
+        <b class="heading4">
+          <p class="mens-clothes1">Men’s Clothes</p>
+          <p class="p6"></p>
+        </b>
+        
+        
+      </section>
+
+      <!-- forward-link -->
+      <section class="forward-links1">
+        <a href="men.html">
+          <div class="forward-link arrow-link">
+            <div class="forward-link-child"></div>
+            <img class="forward-link-item" alt="" src="./assets/arrow-1@2x.png" />
+          </div>
+        </a>
+
+        <a href="men3.html">
+          <button class="rd-link1">
+            <div class="forward-link-child"></div>
+            <div class="div3">3</div>
+          </button>
+        </a>
+        
+        <a href="men2.html">
+          <button class="nd-link1" >
+            <div class="forward-link-child"></div>
+            <div class="div4">2</div>
+          </button>
+        </a>
+
+        <a href="men.html">
+          <button class="st-link1">
+            <div class="forward-link-child"></div>
+            <div class="div3">1</div>
+          </button>
+        </a>
+      </section>
+
+      <!-- trust -->
+      <section class="trust1">
+        <div class="mail1">
+          <img class="image-6-icon1" alt="" src="./assets/image-6@2x.png" />
+          <b class="fashioncornertelegmailcom1">fashioncorner@telegmail.com</b>
+        </div>
+        <div class="return2">
+          <b class="fashioncornertelegmailcom1">Return with 7 days</b>
+          <img class="image-5-icon1" alt="" src="./assets/image-5@2x.png" />
+        </div>
+        <div class="truck1">
+          <b class="free-fast1">Free & Fast Delivery</b>
+          <img class="image-4-icon1" alt="" src="./assets/image-4@2x.png" />
+        </div>
+      </section>
+
+      <!-- subscribe -->
+      <section class="subscribe">
+        <div class="subscribe-us">
+          <div class="by-subscribing-you">
+            By subscribing, you agree to our Privacy Policy and consent to
+            receive updates from us.
+          </div>
+          <button class="button " onclick="alert(document.domain)">
+            <div class="sign-up">Sign Up</div>
+          </button>
+          <input class="subscribe-us-child" type="text" placeholder="Enter your email"/>
+          <div class="join-our-mailing">
+            Join our mailing list for the latest updates and promotions.
+          </div>
+          <div class="subscribe1">Subscribe</div>
+        </div>
+        <div class="links1">
+          <div class="links2">
+            
+            <a href="login.html" target="_blank" class="customer-login1 subscribe-links">Customer Login</a>
+            <a href="contact.html" id="contact" class="contact subscribe-links">Contact</a>
+            <a href="women.html" id="womens" class="womens subscribe-links">Women</a>
+            <a href="men.html" id="mens" class="mens subscribe-links">Men</a>
+            <a href="about.html" id="about-us" class="about-us subscribe-links">About Us</a>
+          </div>
+          <div class="fashion-corner">Fashion Corner</div>
+        </div>
+        <a href="index.html">
+          <img class="logo-icon" alt="" src="./assets/logo@2x.png" />
+        </a>
+        
+        <img class="subscribe-child" alt="" src="./assets/line-3@2x.png" />
+      </section>
+
+      <!-- footer -->
+      <footer class="footer">
+        <div class="social-media-parent social-media-icon">
+          <div class="social-media">
+            
+            <a href="https://twitter.com/akshaydaisuke?lang=en" target="_blank">
+              <img class="twitter-icon" alt="twitter-logo" src="./assets/ellipse-4@2x.png"/>
+            </a>
+            <a href="https://www.instagram.com/akshay212046/" target="_blank">
+              <img class="insta-icon" alt="" src="./assets/ellipse-3@2x.png" />
+            </a>
+            <a href="https://www.facebook.com" target="_blank">
+              <img class="facebook-icon" alt="" src="./assets/ellipse-2@2x.png"/>
+            </a>
+            <a href="mailto:fashioncorner@telegmail.com" target="_blank">
+              <img class="email-icon" alt="" src="./assets/ellipse-1@2x.png" />
+            </a>
+
+          </div>
+        </div>
+
+        <div class="footer-links">
+          <div class="links">
+            <div class="cookie-policy">
+              <a id="cookie-policies" href="./privacy_policy.html"> Cookie Policy </a>
+            </div>
+            <div class="terms-of-service">
+              <a id="terms-conditions" href="./privacy_policy.html"> Terms of Service </a>
+            </div>
+            <div class="privacy-policy">
+              <a id="privacy-policies" href="./privacy_policy.html"> Privacy Policy </a>
+            </div>
+          </div>
+          <div class="tailor-shop-all">
+            © 2024 Fashion Corner. All rights reserved.
+          </div>
+        </div>
+        <img class="footer-child" alt="" src="./assets/line-2@2x.png" />
+        
+        <img class="subscribe-child" alt="" src="./assets/line-3@2x.png" style="padding-left: 75px;" />
+      </footer>  
+    </div>
+    
+    <!-- discount code popup -->
+    <script>
+      var scrollAnimElements = document.querySelectorAll("[data-animate-on-scroll]");
+      var observer = new IntersectionObserver(
+        (entries) => {
+          for (const entry of entries) {
+            if (entry.isIntersecting || entry.intersectionRatio > 0) {
+              const targetElement = entry.target;
+              targetElement.classList.add("animate");
+              observer.unobserve(targetElement);
+            }
+          }
+        },
+        {
+          threshold: 0.15,
+        }
+      );
+      
+      for (let i = 0; i < scrollAnimElements.length; i++) {
+        observer.observe(scrollAnimElements[i]);
+      }
+    </script>
+
+  </body>
+</html>
+    

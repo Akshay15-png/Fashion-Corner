@@ -1,0 +1,43 @@
+body {
+  margin: 0;
+  line-height: normal;
+}
+
+:root {
+  /* fonts */
+  --font-mplus-1p: "Mplus 1p";
+  --font-mplus-1p-bold: "Mplus 1p Bold";
+  --buttons: Lora;
+  --h1: "DM Serif Display";
+  --h2: Lobster;
+  --font-livvic: Livvic;
+
+  /* font sizes */
+  --buttons-size: 24px;
+  --body-size: 32px;
+  --h1-size: 80px;
+  --h2-size: 58px;
+  --h3-size: 50px;
+  --font-size-xl: 20px;
+  --font-size-mini: 15px;
+  --font-size-45xl: 64px;
+  --font-size-17xl: 36px;
+  --font-size-10xl: 29px;
+  --font-size-7xl: 26px;
+
+  /* Colors */
+  --color-whitesmoke: #faf9f6;
+  --color-gainsboro: #d9d9d9;
+  --color-black: #000;
+  --color-snow: #fffbfb;
+  --color-darkgray-100: #b1aeae;
+  --color-darkgray-200: #afabab;
+
+  /* Paddings */
+  --padding-4xs: 9px;
+
+  /* Border radiuses */
+  --br-8xs: 5px;
+  --br-11xl: 30px;
+  --br-3xs: 10px;
+}

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+    <title>Login</title>
+    <link rel="stylesheet" href="./css/login.css">
+    
+</head>
+<body>
+    
+
+<!-- <h2>Sign in/up </h2> -->
+<div class="container" id="container">
+	<div class="form-container sign-up-container">
+		<form action="#">
+			<h1>Create Account</h1>
+			<br><br>
+			<span>Use your email for registration</span>
+			<br>
+			<input type="text" placeholder="Name" />
+			<input type="email" placeholder="Email" />
+			<input type="password" placeholder="Password" />
+			<br><br> 
+			<button>Sign Up</button>
+		</form>
+	</div>
+	<div class="form-container sign-in-container">
+		<form action="#">
+			<h1>Sign in</h1>
+			<br><br>
+			<span>Login to your account</span>
+			<br>
+			<input type="email" placeholder="Email" />
+			<input type="password" placeholder="Password" />
+			<br><br>
+			<a href="#">Forgot your password?</a>
+			<button id="login-button">Login</button>
+		</form>
+	</div>
+
+	<div class="overlay-container">
+		<div class="overlay">
+			<div class="overlay-panel overlay-left">
+				<h1>Welcome Back!</h1>
+				<p>To keep connected with us please login with your personal info</p>
+				<button class="ghost" id="signIn">Sign In</button>
+			</div>
+			<div class="overlay-panel overlay-right">
+				<h1>Hello, Friend!</h1>
+				<p>Unlock a world of style by entering your personal details.</p>
+				<button class="ghost" id="signUp">Sign Up</button>
+			</div>
+		</div>
+	</div>
+</div>
+<script src="./js/login.js"></script>
+
+</body>
+</html>
