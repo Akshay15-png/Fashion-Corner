@@ -16,6 +16,49 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="./js/clothes_click.js"></script>
 
+    <script>
+      function login() {
+          // Show loading 
+          document.getElementById('loading-overlay').style.visibility = 'visible';
+  
+          // Simulate a 2-second delay before redirecting to login.html
+          setTimeout(() => {
+              window.open('./login.html', '_blank'); 
+          }, 2000); 
+      }
+  </script>
+
+  <style>
+    /* CSS styles for loading  */
+    #loading-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999; /* Ensure overlay is on top */
+      visibility: hidden; /* Initially hidden */
+    }
+
+    #loading-spinner {
+      width: 50px;
+      height: 50px;
+      border: 3px solid #f3f3f3; /* Light gray border */
+      border-top: 3px solid #58db34; /* Blue border on top (loading animation) */
+      border-radius: 50%; /* Circular shape */
+      animation: spin 1s linear infinite; /* Spin animation */
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+  </style>
+
     <style>
       @font-face {
         font-family: "Mplus 1p Bold";
@@ -26,6 +69,11 @@
   </head>
   <body>
     <div class="index-page">
+
+      <!-- loading circle -->
+      <div id="loading-overlay">
+        <div id="loading-spinner"></div>
+      </div>
            
       <!-- discount code -->
       <header class="discount-bar" id="discount-bar" data-animate-on-scroll>
@@ -74,33 +122,33 @@
         <div class="products">
           
           <div class="product-61">
-            <img class="price-for-photo-61" alt="" src="./assets/women-3-product-6.PNG" />
-            <img class="photo6-icon1" id="photo-6" alt="" src="./assets/20230803-DSC02831.jpg" />
+            <img class="price-for-photo-61" alt="" src="./assets/women-3-product-6.PNG"  onclick="login()"/>
+            <img class="photo6-icon1" id="photo-6" alt="" src="./assets/20230803-DSC02831.jpg" style="cursor: pointer;" onclick="login()"/>
           </div>
 
           <div class="product-51">
-            <img class="price-for-photo-51" alt="" src="./assets/women-3-product-5.PNG" />
-            <img class="photo5-icon1" id="photo-5" alt="" src="./assets/20230803-DSC02420.jpg" />
+            <img class="price-for-photo-51" alt="" src="./assets/women-3-product-5.PNG"  onclick="login()"/>
+            <img class="photo5-icon1" id="photo-5" alt="" src="./assets/20230803-DSC02420.jpg" style="cursor: pointer;" onclick="login()"/>
           </div>
 
           <div class="product-41">
-            <img class="price-for-photo-41" alt="" src="./assets/women-3-product-4.PNG" />
-            <img class="photo6-icon1" id="photo-4" alt="" src="./assets/20230803-DSC01920.jpg" />
+            <img class="price-for-photo-41" alt="" src="./assets/women-3-product-4.PNG"  onclick="login()"/>
+            <img class="photo6-icon1" id="photo-4" alt="" src="./assets/20230803-DSC01920.jpg" style="cursor: pointer;" onclick="login()"/>
           </div>
 
           <div class="product-31">
-            <img class="price-for-photo-31" alt="" src="./assets/women-3-product-3.PNG"/>
-            <img class="photo3-icon1" id="photo-3" alt="" src="./assets/20230803-DSC02040.jpg" />
+            <img class="price-for-photo-31" alt="" src="./assets/women-3-product-3.PNG" onclick="login()"/>
+            <img class="photo3-icon1" id="photo-3" alt="" src="./assets/20230803-DSC02040.jpg" style="cursor: pointer;" onclick="login()"/>
           </div>
 
           <div class="product-21">
-            <img class="price-for-photo-21" alt=""src="./assets/women-3-product-2.PNG"/>
-            <img class="photo2-icon1" id="photo-2" alt="" src="./assets/20230803-DSC02945.jpg" />
+            <img class="price-for-photo-21" alt=""src="./assets/women-3-product-2.PNG" onclick="login()"/>
+            <img class="photo2-icon1" id="photo-2" alt="" src="./assets/20230803-DSC02945.jpg" style="cursor: pointer;" onclick="login()"/>
           </div>
 
           <div class="product-11">
-            <img class="price-for-photo1" alt="" src="./assets/women-3-product-1.PNG"/>
-            <img class="photo6-icon1" id="photo-1" alt="" src="./assets/20230802-DSC01367.jpg" />
+            <img class="price-for-photo1" alt="" src="./assets/women-3-product-1.PNG" onclick="login()"/>
+            <img class="photo6-icon1" id="photo-1" alt="" src="./assets/20230802-DSC01367.jpg" style="cursor: pointer;" onclick="login()"/>
           </div>
 
         </div>
