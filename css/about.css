@@ -46,19 +46,7 @@
   width: 314px;
   height: 385px;
 }
-.linkedin-icon1,
-.twitter-icon1 {
-  position: absolute;
-  top: 380px;
-  left: 188px;
-  width: 35px;
-  height: 31px;
-  overflow: hidden;
-  object-fit: cover;
-}
-.twitter-icon1 {
-  left: 123px;
-}
+
 .co-founder1,
 .farah-hawa {
   position: absolute;
@@ -82,19 +70,8 @@
   width: 314px;
   height: 387px;
 }
-.linkedin-icon2,
-.twitter-icon2 {
-  position: absolute;
-  top: 380px;
-  left: 98px;
-  width: 35px;
-  height: 31px;
-  overflow: hidden;
-  object-fit: cover;
-}
-.linkedin-icon2 {
-  left: 163px;
-}
+
+
 .ansh-bhawnani,
 .founder1 {
   position: absolute;

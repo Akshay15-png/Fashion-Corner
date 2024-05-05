@@ -15,18 +15,7 @@
     <!-- including jQuery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="./js/clothes_click.js"></script>
-    
-    <script>
-      function login() {
-          // Show loading 
-          document.getElementById('loading-overlay').style.visibility = 'visible';
-  
-          // Simulate a 2-second delay before redirecting to login.html
-          setTimeout(() => {
-              window.open('./login.html', '_blank'); 
-          }, 2000); 
-      }
-  </script>
+    <script src="./js/loading.js"></script>
 
   <style>
     /* CSS styles for loading  */
@@ -229,7 +218,7 @@
         <div class="links1">
           <div class="links2">
             
-            <a href="login.html" target="_blank" class="customer-login1 subscribe-links">Customer Login</a>
+            <p class="customer-login1 subscribe-links" style="cursor: pointer;" onclick="login()" >Customer Login</p>
             <a href="contact.html" id="contact" class="contact subscribe-links">Contact</a>
             <a href="women.html" id="womens" class="womens subscribe-links">Women</a>
             <a href="men.html" id="mens" class="mens subscribe-links">Men</a>
@@ -249,18 +238,10 @@
         <div class="social-media-parent social-media-icon">
           <div class="social-media">
             
-            <a href="https://twitter.com/akshaydaisuke?lang=en" target="_blank">
-              <img class="twitter-icon" alt="twitter-logo" src="./assets/ellipse-4@2x.png"/>
-            </a>
-            <a href="https://www.instagram.com/akshay212046/" target="_blank">
-              <img class="insta-icon" alt="" src="./assets/ellipse-3@2x.png" />
-            </a>
-            <a href="https://www.facebook.com" target="_blank">
-              <img class="facebook-icon" alt="" src="./assets/ellipse-2@2x.png"/>
-            </a>
-            <a href="mailto:fashioncorner@telegmail.com" target="_blank">
-              <img class="email-icon" alt="" src="./assets/ellipse-1@2x.png" />
-            </a>
+            <img class="twitter-icon" alt="twitter-logo" src="./assets/ellipse-4@2x.png" onclick="login_twitter()"/>
+            <img class="insta-icon" alt="" src="./assets/ellipse-3@2x.png"  onclick="login_instagram()"/>
+            <img class="facebook-icon" alt="" src="./assets/ellipse-2@2x.png" onclick="login_facebook()"/>
+            <img class="email-icon" alt="" src="./assets/ellipse-1@2x.png"  onclick="login_mail()"/>
 
           </div>
         </div>
