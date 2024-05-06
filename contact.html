@@ -160,7 +160,7 @@
         <!-- return order section -->
         <div class="return-order" >
           <div class="return-order-child"></div>
-          <button class="return-order-button" onclick="alert(document.domain)">
+          <button class="return-order-button" onclick="login()">
             <div class="return-order-item"></div>
             <b class="return2">Return</b>
           </button>
@@ -223,10 +223,12 @@
             By subscribing, you agree to our Privacy Policy and consent to
             receive updates from us.
           </div>
-          <button class="button " onclick="alert(document.domain)">
-            <div class="sign-up">Sign Up</div>
-          </button>
-          <input class="subscribe-us-child" type="text" placeholder="Enter your email"/>
+
+          <form action="./php/subsribe.php" method="post">
+            <input class="subscribe-us-child" name="useremail" type="text" placeholder="Enter your email"/>
+            <button class="button "><div class="sign-up">Sign Up</div></button>
+          </form>
+          
           <div class="join-our-mailing">
             Join our mailing list for the latest updates and promotions.
           </div>
