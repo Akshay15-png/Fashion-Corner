@@ -9,6 +9,7 @@ function login() {
     }, 2000); 
 }
 
+
 // loading circle and jump to mail
 function login_mail() {
     // Show loading 
@@ -61,4 +62,10 @@ function login_linkedin() {
     setTimeout(() => {
         window.open('https://www.linkedin.com/in/akshay-katoch-36a86b23a', '_blank'); 
     }, 2000); 
+}
+
+// loading.js
+
+function showLoading() {
+    document.getElementById('loading-overlay').style.display = 'flex';
 }
