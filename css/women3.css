@@ -104,7 +104,8 @@
   cursor: pointer;
   border: 0;
   padding: 0;
-  background-color: transparent;
+  /* background-color: transparent; */
+  background-color: var(--color-gainsboro);
   top: 0;
   left: 190px;
   width: 95px;
@@ -122,8 +123,7 @@
   cursor: pointer;
   border: 0;
   padding: 0;
-  /* background-color: transparent; */
-  background-color: var(--color-gainsboro);
+  background-color: transparent;
   top: 0;
   left: 95px;
   width: 95px;

@@ -70,7 +70,7 @@
   position:absolute;
   top: 0;
   left: 0;
-  background-color: var(--color-gainsboro);
+  
   width: 95px;
   height: 68px;
 }
@@ -106,7 +106,8 @@
   cursor: pointer;
   border: 0;
   padding: 0;
-  background-color: transparent;
+  /* background-color: transparent; */
+  background-color: var(--color-gainsboro);
   top: 0;
   left: 190px;
   width: 95px;
@@ -146,7 +147,8 @@
 }
 .st-link1 :hover,.nd-link1 :hover,.rd-link1 :hover,.arrow-link :hover{
   cursor: pointer;
-  background-color: #b3b1b1;
+  /* background-color: #b3b1b1; */
+  background-color: var(--color-gainsboro);
 }
 
 .forward-links1 {
