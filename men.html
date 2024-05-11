@@ -17,8 +17,8 @@
     <script src="./js/clothes_click.js"></script>
     <script src="./js/loading.js"></script>
 
+    <!--  CSS styles for loading   -->
   <style>
-    /* CSS styles for loading  */
     #loading-overlay {
       position: fixed;
       top: 0;
@@ -55,6 +55,8 @@
         font-weight: 700;
       }
     </style>
+
+    
   </head>
   <body>
     <div class="index-page">
@@ -97,7 +99,7 @@
           </button>
 
           <button class="hover-functioning4">
-            <a href="login.html" target="_blank" class="login home-links">Sign Up</a>
+            <div onclick="login()" class="login home-links">Sign Up</div>
           </button>
         </nav>
         <a href="index.html">
@@ -208,7 +210,7 @@
           </div>
 
           <form action="./php/subsribe.php" method="post">
-            <input class="subscribe-us-child" name="useremail" type="text" placeholder="Enter your email"/>
+            <input class="subscribe-us-child" name="useremail" type="text" placeholder="Enter your email" required/>
             <button class="button "><div class="sign-up">Sign Up</div></button>
           </form>
 

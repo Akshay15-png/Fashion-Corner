@@ -281,7 +281,7 @@
   left: 0;
   width: 327px;
   height: 116px;
-  /* mix-blend-mode: multiply; */
+  mix-blend-mode: multiply;
 }
 .subscribe-child {
   top: 0;
@@ -734,7 +734,6 @@
 }
 
 /*  */
-
 
 
 .home {

@@ -64,8 +64,10 @@ function login_linkedin() {
     }, 2000); 
 }
 
+
 // loading.js
 
 function showLoading() {
     document.getElementById('loading-overlay').style.display = 'flex';
 }
+
