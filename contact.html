@@ -16,6 +16,7 @@
     <script src="./js/home-slider.js"></script>
     <script src="./js/clothes_click.js"></script>
     <script src="./js/loading.js"></script>
+    <script src="./js/track_order.js"></script>
 
     <style>
       /* CSS styles for loading  */
@@ -158,7 +159,7 @@
         </section>
         
         <!-- return order section -->
-        <div class="return-order" >
+        <div class="return-order">
           <div class="return-order-child"></div>
           <button class="return-order-button" onclick="login()">
             <div class="return-order-item"></div>
@@ -173,7 +174,7 @@
             <p class="when-you-contact-customer-serv">&nbsp;</p>
             <p class="when-you-contact-customer-serv">
               The return request must be raised with us within 15 days from the
-              date you receive your parcel
+              date you receive your parcel.
             </p>
           </div>
           <b class="i-want-to">I WANT TO RETURN SOMETHING</b>
@@ -183,7 +184,7 @@
         <!-- track order section -->
         <div class="track-order" >
           <div class="return-order-child"></div>
-          <button class="track-order-button" onclick="alert(document.domain)">
+          <button class="track-order-button" onclick="openRandomLink()">
             <div class="track-order-item"></div>
             <b class="track-order1">Track Order</b>
           </button>
@@ -191,11 +192,11 @@
           <div class="track-order-inner"></div>
 
           <div class="">
-            <input class="subscribe-us-child eg-312657432980" type="text" placeholder="e.g. 312657432980"/>
+            <input class="subscribe-us-child eg-312657432980" type="text" placeholder="e.g. 31rc5a8k0" id="track-order-input"  maxlength="9" required/>
           </div>
 
           <div class="order-no-container">
-            <span>Order No. </span>
+            <span>Order Id. </span>
             <span class="span">*</span>
           </div>
           <div class="enter-the-order">
@@ -224,7 +225,7 @@
             receive updates from us.
           </div>
 
-          <form action="./php/subsribe.php" method="post">
+          <form action="./php/subsribe_contact.php" method="post">
             <input class="subscribe-us-child" name="useremail" type="text" placeholder="Enter your email" required/>
             <button class="button "><div class="sign-up">Sign Up</div></button>
           </form>
