@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <!-- <meta name="viewport" content="initial-scale=1, width=device-width" /> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+
+    <link rel="stylesheet" href="../css/index-global.css" />
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Mplus 1p:wght@400;500&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500&display=swap"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM Serif Display:wght@400&display=swap"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lobster:wght@400&display=swap"/>
+
+    <!-- including jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="../js/home-slider.js"></script>
+    <script src="../js/clothes_click.js"></script>
+    <script src="../js/loading.js"></script>
+
+  <style>
+    /* CSS styles for loading  */
+    #loading-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999; /* Ensure overlay is on top */
+      visibility: hidden; /* Initially hidden */
+    }
+
+    #loading-spinner {
+      width: 50px;
+      height: 50px;
+      border: 3px solid #f3f3f3; /* Light gray border */
+      border-top: 3px solid #58db34; /* Blue border on top (loading animation) */
+      border-radius: 50%; /* Circular shape */
+      animation: spin 1s linear infinite; /* Spin animation */
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+  </style>
+
+    <style>
+      @font-face {
+        font-family: "Mplus 1p Bold";
+        src: url("../assets/mplus-1p-bold.ttf");
+        font-weight: 700;
+      }
+    </style>
+  </head>
+  <body>
+
+    <!-- loading circle -->
+    <div id="loading-overlay">
+      <div id="loading-spinner"></div>
+    </div>
+
+    <div class="index-page">
+      
+      <!-- nav bar -->
+      <section class="nav-bar" id="nav-bar">
+        <a href="./main.html">
+          <img class="fashion-corner-1-1" alt="logo" src="../assets/fashion-corner-1-1@2x.png"/>
+        </a>
+
+        <button class="hover-functioning4">
+          <img src="../assets/cart_logo.png" class="cart_logo" alt="cart" onclick="login()">
+        </button>
+
+        <button class="hover-functioning4">
+          <img src="../assets/user_profile_icon.png" class="profile_logo" alt="profile" onclick="login()">
+        </button>
+
+        <button class="hover-functioning4">
+          <img src="../assets/menu_logo.png" class="menu_logo" alt="menu" onclick="login()">
+        </button>
+      </section>
+      
+      
+      <!-- items -->
+      <section class="clothes-pic1">
+
+        <!-- heading -->
+        <div>
+          <b class="heading4">
+            <p class="mens-clothes1">All Products</p>
+            <p class="p6"></p>
+          </b>
+        </div>
+
+        <!-- products -->
+        <div class="products">
+          
+          <div class="product-1">
+            <img class="price-for-photo1" alt="" src="../assets/price-for-photo1@2x.png" onclick="login()"/>
+            <img class="photo6-icon1" id="photo-1" alt="" src="../assets/photo11@2x.png" style="cursor: pointer;" onclick="login()"/>
+          </div>
+          
+          <div class="product-2">
+            <img class="price-for-photo-2" alt=""src="../assets/price-for-photo-21@2x.png"onclick="login()"/>
+            <img class="photo2-icon1" id="photo-2" alt="" src="../assets/photo21@2x.png" style="cursor: pointer;" onclick="login()"/>
+          </div>
+          
+          <div class="product-3">
+            <img class="price-for-photo-3" alt="" src="../assets/women-2-product-5.PNG"onclick="login()"/>
+            <img class="photo3-icon1" id="photo-3" alt="" src="../assets/2_f05d727d-6eb6-4bad-a3f0-f3f26adc06a3.jpg" style="cursor: pointer;" onclick="login()"/>
+          </div>
+          
+          
+          <div class="product-4">
+            <img class="price-for-photo-4" alt="" src="../assets/price-for-photo-41@2x.png" onclick="login()"/>
+            <img class="photo6-icon1" id="photo-4" alt="" src="../assets/photo41@2x.png" style="cursor: pointer;" onclick="login()"/>
+          </div>
+          
+          <div class="product-5">
+          <img class="price-for-photo-5" alt="" src="../assets/women-2-product-3.PNG" onclick="login()"/>
+          <img class="photo5-icon1" id="photo-5" alt="" src="../assets/CopyofDSC01603.jpg" style="cursor: pointer;" onclick="login()"/>
+          </div>
+          
+          <div class="product-6">
+            <img class="price-for-photo-6" alt="" src="../assets/price-for-photo-61@2x.png" onclick="login()"/>
+            <img class="photo6-icon1" id="photo-6" alt="" src="../assets/photo61@2x.png" style="cursor: pointer;" onclick="login()"/>
+          </div>
+
+          <div class="product-7">
+            <img class="price-for-photo7" alt="" src="../assets/women-2-product-2.PNG" onclick="login()"/>
+            <img class="photo7-icon1" id="photo-7" alt="" src="../assets/CopyofDSC01686.jpg" style="cursor: pointer;" onclick="login()"/>
+          </div>
+          
+          <div class="product-8">
+            <img class="price-for-photo-8" alt=""src="../assets/men-2-product-5.PNG"onclick="login()"/>
+            <img class="photo8-icon1" id="photo-8" alt="" src="../assets/1_eb86e209-c9b0-4c04-a7ae-c5087fb1c20f.jpg" style="cursor: pointer;" onclick="login()"/>
+          </div>
+          
+          <div class="product-9">
+            <img class="price-for-photo-9" alt="" src="../assets/women-product-2.PNG"onclick="login()"/>
+            <img class="photo9-icon1" id="photo-9" alt="" src="../assets/DSC00550.jpg" style="cursor: pointer;" onclick="login()"/>
+          </div>
+          
+        </div>       
+      </section>
+
+      <!-- forward-link -->
+      <section class="forward-links1">
+
+        <a href="main.html">
+          <button class="st-link1">
+            <div class="forward-link-child"></div>
+            <div class="div3">1</div>
+          </button>
+        </a>
+        
+        
+        <a href="main2.html">
+          <button class="nd-link1" >
+            <div class="forward-link-child"></div>
+            <div class="div4">2</div>
+          </button>
+        </a>
+        
+        <a href="main2.html">
+          <div class="forward-link arrow-link">
+            <div class="forward-link-child"></div>
+            <img class="forward-link-item" alt="" src="../assets/arrow-1@2x.png" />
+          </div>
+        </a>
+      </section>
+      
+      <!-- footer -->
+      <footer class="footer">
+        <div class="social-media-parent social-media-icon">
+          <div class="social-media">
+            
+              <img class="twitter-icon" alt="twitter-logo" src="../assets/ellipse-4@2x.png" onclick="login_twitter()"/>
+              <img class="insta-icon" alt="" src="../assets/ellipse-3@2x.png"  onclick="login_instagram()"/>
+              <img class="facebook-icon" alt="" src="../assets/ellipse-2@2x.png" onclick="login_facebook()"/>
+              <img class="email-icon" alt="" src="../assets/ellipse-1@2x.png"  onclick="login_mail()"/>
+
+          </div>
+        </div>
+
+        <div class="footer-links">
+          <div class="links">
+            <div class="cookie-policy">
+              <a id="cookie-policies" href="../privacy_policy.html"> Cookie Policy </a>
+            </div>
+            <div class="terms-of-service">
+              <a id="terms-conditions" href="../privacy_policy.html"> Terms of Service </a>
+            </div>
+            <div class="privacy-policy">
+              <a id="privacy-policies" href="../privacy_policy.html"> Privacy Policy </a>
+            </div>
+          </div>
+          <div class="tailor-shop-all">
+            © 2024 Fashion Corner. All rights reserved.
+          </div>
+        </div>
+        <img class="footer-child" alt="" src="../assets/line-2@2x.png" />
+        
+        <img class="subscribe-child" alt="" src="../assets/line-3@2x.png" style="padding-left: 75px;" />
+      </footer>  
+    </div>
+    
+  </body>
+</html>
+    
