@@ -128,12 +128,20 @@
     height: 50px;
 }
 .eg-312657432980 {
-    position: absolute;
-    top: 469px;
-    background-color: #b4b4b4;
-    left: 104px;
-    white-space: pre-wrap;
-  }
+  position: absolute;
+  top: 469px;
+  background-color: #b4b4b4;
+  left: 104px;
+  white-space: pre-wrap;
+  border: 0;
+  background-color: var(--color-darkgray-100);
+  position: absolute;
+  border-radius: var(--br-3xs);
+  font-size: x-large;
+  padding-left: 40px;
+  width: 450px;
+  height: 58px;
+}
   .span {
     color: red;
   }
