@@ -39,6 +39,7 @@
 </head>
 <body>
 
+    <!-- loading spinner -->
 <div id="loading-overlay">
     <div id="loading-spinner"></div>
 </div>
@@ -55,13 +56,13 @@
         </form>
     </div>
 	<div class="form-container sign-in-container">
-		<form action="./php/sign_in.php" method="POST">
+		<form id="signinform" action="./php/sign_in.php" method="POST" onsubmit="return validateForm2()">
 			<h1>Sign in</h1>
 			<br><br>
 			<span>Login to your account</span>
 			<br>
-			<input type="email" placeholder="Email" name="useremail"/>
-			<input type="password" placeholder="Password" name="userpass"/>
+			<input type="email" placeholder="Email" name="useremail" minlength="8" required/>
+			<input type="password" placeholder="Password" name="userpass" minlength="6" required/>
 			<br><br>
 			<a href="#">Forgot your password?</a>
 			<button id="login-button">Login</button>
@@ -87,6 +88,7 @@
 
 <!-- loading spinner -->
 <script src="./js/loading.js"></script>
+
 <script>
     function validateForm() {
         // Retrieve form inputs
@@ -107,6 +109,22 @@
 
     function showLoading() {
         document.getElementById('loading-overlay').style.display = 'flex';
+    }
+
+    function validateForm2() {
+        // Retrieve form inputs
+        var useremail = document.forms["signinform"]["useremail"].value;
+        var userpass = document.forms["signinform"]["userpass"].value;
+
+        // Check if any field is empty
+        if (useremail === "" || userpass === "") {
+            alert("All fields are required!");
+            return false; 
+        }
+
+        // Show loading 
+        showLoading();
+        return true; 
     }
 </script>
 

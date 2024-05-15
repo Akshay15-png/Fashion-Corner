@@ -641,3 +641,49 @@ margin-right:1000px
   height: 1000px;
   overflow: hidden;
 }
+
+/* user profile */
+.dropdown {
+  position: relative;
+  display: block;
+  padding-left: 1650px;
+  padding-top: 120px;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  min-width: 190px;
+  padding: 10px 10px 10px 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+}
+.dropdown-content{
+  text-align: center;
+  display: none;
+  padding: 15px;
+  text-decoration: none;
+  font-size: large;
+  font-family: "Mplus 1p Bold";
+  font-weight: 800;
+  color: #333;
+}
+ .profile-links {
+  text-align: center;
+  display: block;
+  padding: 15px;
+  text-decoration: none;
+  font-size: large;
+  font-family: "Mplus 1p Bold";
+  font-weight: 800;
+  color: #333;
+}
+.dropdown-content .profile-links:hover {
+  background-color: #f9f9f9;
+  cursor: pointer;
+}
+#welcomeMessage{
+  font-size: larger;
+  text-align: center;
+  
+}

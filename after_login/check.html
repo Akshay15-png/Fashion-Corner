@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/main.css">
+    <title>User Dropdown Menu</title>
+    <style>
+        /* Basic styling */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+        .dropdown {
+            position: relative;
+            display: inline-block;
+            padding-left: 1650px;
+            padding-top: 120px;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #fff;
+            min-width: 190px;
+            padding: 10px 10px 10px 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            z-index: 1;
+        }
+        .dropdown-content a {
+            text-align: center;
+            display: block;
+            padding: 15px;
+            text-decoration: none;
+            font-size: large;
+            color: #333;
+        }
+        .dropdown-content a:hover {
+            background-color: #f9f9f9;
+        }
+        #welcomeMessage{
+            font-size: larger;
+            text-align: center;
+            
+        }
+    </style>
+</head>
+<body>
+
+<div class="dropdown">
+    <button onclick="toggleDropdown()" class="hover-functioning4">
+        <img src="../assets/user_profile_icon.png" class="profile_logo" alt="profile" >
+    </button>
+    <div id="dropdownMenu" class="dropdown-content">
+        <span id="welcomeMessage">Welcome, Username</span>
+        <a href="#">Orders</a>
+        <a href="#">Cart</a>
+        <a href="#">Return</a>
+        <a href="#">Logout</a>
+    </div>
+</div>
+
+<script>
+    // Function to toggle dropdown visibility
+    function toggleDropdown() {
+        var dropdownMenu = document.getElementById("dropdownMenu");
+        dropdownMenu.style.display = (dropdownMenu.style.display === "block") ? "none" : "block";
+    }
+</script>
+
+</body>
+</html>

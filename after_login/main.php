@@ -1,3 +1,20 @@
+<?php
+// Check if user is logged in
+session_start();
+
+// Redirect to login page if user is not logged in
+if (isset($_SESSION['userEmail']) and isset($_SESSION['userName'])) {
+    $userName= $_SESSION['userName'];
+    $userEmail= $_SESSION['userEmail'];
+    // echo "welcome $userName";
+    // echo "welcome $userEmail";
+  }
+else {
+    header('Location: ../login.html');
+    exit;
+}
+?>
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -18,6 +35,7 @@
     <script src="../js/home-slider.js"></script>
     <script src="../js/clothes_click.js"></script>
     <script src="../js/loading.js"></script>
+    <script src="../js/profile.js"></script>
 
   <style>
     /* CSS styles for loading  */
@@ -67,19 +85,31 @@
 
     <div class="index-page">
       
+   
+      
       <!-- nav bar -->
       <section class="nav-bar" id="nav-bar">
-          <a href="./main.html">
+          <a href="./main.php">
             <img class="fashion-corner-1-1" alt="logo" src="../assets/fashion-corner-1-1@2x.png"/>
           </a>
 
           <button class="hover-functioning4">
-            <img src="../assets/cart_logo.png" class="cart_logo" alt="cart" onclick="login()">
+            <img src="../assets/cart_logo.png" class="cart_logo" alt="cart" >
           </button>
 
-          <button class="hover-functioning4">
-            <img src="../assets/user_profile_icon.png" class="profile_logo" alt="profile" onclick="login()">
-          </button>
+          <!-- profile button -->
+          <div class="dropdown">
+            <button  class="hover-functioning4" onclick="toggleDropdown()">
+                <img src="../assets/user_profile_icon.png" class="profile_logo" alt="profile" >
+            </button>
+            <div id="dropdownMenu" class="dropdown-content">
+                <span id="welcomeMessage">Welcome,<?php echo " $userName !"?></span>
+                <a href="#" class="profile-links">Orders</a>
+                <a href="#" class="profile-links">Cart</a>
+                <a href="#" class="profile-links">Return</a>
+                <a class="profile-links" onclick="logout()" >Logout</a>
+            </div>
+          </div>
 
           <!-- menu button -->
           <button class="hover-functioning4">
@@ -94,11 +124,11 @@
 
                     <div class="menu-items" >
                       
-                      <li id="back-arrow"><a href="./main.html" style="font-size: xx-large;" >➜</a></li>
-                      <li><a href="./main.html" style="font-size: xx-large;"  >Home</a></li>
-                      <li><a href="./about2.html" style="font-size: xx-large;" >About</a></li>
-                      <li><a href="./contact2.html" style="font-size: xx-large;" >Contact</a></li>
-                      <li><a href="../booking.html" style="font-size: xx-large;" >Booking</a></li>
+                      <li id="back-arrow"><a href="./main.php" style="font-size: xx-large;" >➜</a></li>
+                      <li><a href="./main.php" style="font-size: xx-large;"  >Home</a></li>
+                      <li><a href="./about2.php" style="font-size: xx-large;" >About</a></li>
+                      <li><a href="./contact2.php" style="font-size: xx-large;" >Contact</a></li>
+                      <li><a href="../booking2.html" style="font-size: xx-large;" >Booking</a></li>
                       <li><a href="../privacy_policy.html" style="font-size: xx-large;" >Policy</a></li>
                     </div>
 
@@ -110,7 +140,6 @@
                   </div>
                 </div>
               </div>   
-      
           </button>
       </section>
       
@@ -181,7 +210,7 @@
       <!-- forward-link -->
       <section class="forward-links1">
 
-        <a href="main.html">
+        <a href="main.php">
           <button class="st-link1">
             <div class="forward-link-child"></div>
             <div class="div3">1</div>
@@ -189,14 +218,14 @@
         </a>
         
         
-        <a href="main2.html">
+        <a href="main2.php">
           <button class="nd-link1" >
             <div class="forward-link-child"></div>
             <div class="div4">2</div>
           </button>
         </a>
         
-        <a href="main2.html">
+        <a href="main2.php">
           <div class="forward-link arrow-link">
             <div class="forward-link-child"></div>
             <img class="forward-link-item" alt="" src="../assets/arrow-1@2x.png" />
@@ -241,4 +270,3 @@
     
   </body>
 </html>
-<script>
