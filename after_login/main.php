@@ -6,8 +6,7 @@ session_start();
 if (isset($_SESSION['userEmail']) and isset($_SESSION['userName'])) {
     $userName= $_SESSION['userName'];
     $userEmail= $_SESSION['userEmail'];
-    // echo "welcome $userName";
-    // echo "welcome $userEmail";
+
   }
 else {
     header('Location: ../login.html');
@@ -159,49 +158,49 @@ else {
         <div class="products">
           
           <div class="product-1">
-            <img class="price-for-photo1" alt="" src="../assets/price-for-photo1@2x.png" onclick="login()"/>
-            <img class="photo6-icon1" id="photo-1" alt="" src="../assets/photo11@2x.png" style="cursor: pointer;" onclick="login()"/>
+            <img class="price-for-photo1" alt="" src="../assets/price-for-photo1@2x.png" onclick="window.location.href='./product_description/page1Product1.php?ID=21311'"/>
+            <img class="photo6-icon1" id="photo-1" alt="" src="../assets/photo11@2x.png" style="cursor: pointer;" onclick="window.location.href='./product_description/page1Product1.php?ID=21311'"/>
           </div>
           
           <div class="product-2">
-            <img class="price-for-photo-2" alt=""src="../assets/price-for-photo-21@2x.png"onclick="login()"/>
-            <img class="photo2-icon1" id="photo-2" alt="" src="../assets/photo21@2x.png" style="cursor: pointer;" onclick="login()"/>
+            <img class="price-for-photo-2" alt=""src="../assets/price-for-photo-21@2x.png"onclick="window.location.href='./product_description/page1Product1.php?ID=21312'"/>
+            <img class="photo2-icon1" id="photo-2" alt="" src="../assets/photo21@2x.png" style="cursor: pointer;" onclick="window.location.href='./product_description/page1Product1.php?ID=21312'"/>
           </div>
           
           <div class="product-3">
-            <img class="price-for-photo-3" alt="" src="../assets/women-2-product-5.PNG"onclick="login()"/>
-            <img class="photo3-icon1" id="photo-3" alt="" src="../assets/2_f05d727d-6eb6-4bad-a3f0-f3f26adc06a3.jpg" style="cursor: pointer;" onclick="login()"/>
+            <img class="price-for-photo-3" alt="" src="../assets/women-2-product-5.PNG"onclick="window.location.href='./product_description/page1Product1.php?ID=21313'"/>
+            <img class="photo3-icon1" id="photo-3" alt="" src="../assets/2_f05d727d-6eb6-4bad-a3f0-f3f26adc06a3.jpg" style="cursor: pointer;" onclick="window.location.href='./product_description/page1Product1.php?ID=21313'"/>
           </div>
           
           
           <div class="product-4">
-            <img class="price-for-photo-4" alt="" src="../assets/price-for-photo-41@2x.png" onclick="login()"/>
-            <img class="photo6-icon1" id="photo-4" alt="" src="../assets/photo41@2x.png" style="cursor: pointer;" onclick="login()"/>
+            <img class="price-for-photo-4" alt="" src="../assets/price-for-photo-41@2x.png" onclick="window.location.href='./product_description/page1Product1.php?ID=21314'"/>
+            <img class="photo6-icon1" id="photo-4" alt="" src="../assets/photo41@2x.png" style="cursor: pointer;" onclick="window.location.href='./product_description/page1Product1.php?ID=21314'"/>
           </div>
           
           <div class="product-5">
-          <img class="price-for-photo-5" alt="" src="../assets/women-2-product-3.PNG" onclick="login()"/>
-          <img class="photo5-icon1" id="photo-5" alt="" src="../assets/CopyofDSC01603.jpg" style="cursor: pointer;" onclick="login()"/>
+          <img class="price-for-photo-5" alt="" src="../assets/women-2-product-3.PNG" onclick="window.location.href='./product_description/page1Product1.php?ID=21315'"/>
+          <img class="photo5-icon1" id="photo-5" alt="" src="../assets/CopyofDSC01603.jpg" style="cursor: pointer;" onclick="window.location.href='./product_description/page1Product1.php?ID=21315'"/>
           </div>
           
           <div class="product-6">
-            <img class="price-for-photo-6" alt="" src="../assets/price-for-photo-61@2x.png" onclick="login()"/>
-            <img class="photo6-icon1" id="photo-6" alt="" src="../assets/photo61@2x.png" style="cursor: pointer;" onclick="login()"/>
+            <img class="price-for-photo-6" alt="" src="../assets/price-for-photo-61@2x.png" onclick="window.location.href='./product_description/page1Product1.php?ID=21316'"/>
+            <img class="photo6-icon1" id="photo-6" alt="" src="../assets/photo61@2x.png" style="cursor: pointer;" onclick="window.location.href='./product_description/page1Product1.php?ID=21316'"/>
           </div>
 
           <div class="product-7">
-            <img class="price-for-photo7" alt="" src="../assets/women-2-product-2.PNG" onclick="login()"/>
-            <img class="photo7-icon1" id="photo-7" alt="" src="../assets/CopyofDSC01686.jpg" style="cursor: pointer;" onclick="login()"/>
+            <img class="price-for-photo7" alt="" src="../assets/women-2-product-2.PNG" onclick="window.location.href='./product_description/page1Product1.php?ID=21317'"/>
+            <img class="photo7-icon1" id="photo-7" alt="" src="../assets/CopyofDSC01686.jpg" style="cursor: pointer;" onclick="window.location.href='./product_description/page1Product1.php?ID=21317'"/>
           </div>
           
           <div class="product-8">
-            <img class="price-for-photo-8" alt=""src="../assets/men-2-product-5.PNG"onclick="login()"/>
-            <img class="photo8-icon1" id="photo-8" alt="" src="../assets/1_eb86e209-c9b0-4c04-a7ae-c5087fb1c20f.jpg" style="cursor: pointer;" onclick="login()"/>
+            <img class="price-for-photo-8" alt=""src="../assets/men-2-product-5.PNG"onclick="window.location.href='./product_description/page1Product1.php?ID=21318'"/>
+            <img class="photo8-icon1" id="photo-8" alt="" src="../assets/1_eb86e209-c9b0-4c04-a7ae-c5087fb1c20f.jpg" style="cursor: pointer;" onclick="window.location.href='./product_description/page1Product1.php?ID=21318'"/>
           </div>
           
           <div class="product-9">
-            <img class="price-for-photo-9" alt="" src="../assets/women-product-2.PNG"onclick="login()"/>
-            <img class="photo9-icon1" id="photo-9" alt="" src="../assets/DSC00550.jpg" style="cursor: pointer;" onclick="login()"/>
+            <img class="price-for-photo-9" alt="" src="../assets/women-product-2.PNG"onclick="window.location.href='./product_description/page1Product1.php?ID=21319'"/>
+            <img class="photo9-icon1" id="photo-9" alt="" src="../assets/DSC00550.jpg" style="cursor: pointer;" onclick="window.location.href='./product_description/page1Product1.php?ID=21319'"/>
           </div>
           
         </div>       
