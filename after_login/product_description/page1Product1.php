@@ -123,7 +123,14 @@ else {
 
                     <div class="menu-items" >
                       
-                      <li id="back-arrow"><a href="./page1Product1.php" style="font-size: xx-large;" >➜</a></li>
+                      <li id="back-arrow"><a href="./page1Product1.php?ID=
+                          <?php 
+                            include '../../php/db_connection.php' ;
+                            if (isset($_GET['ID'])) {
+                            $productId = intval($_GET['ID']);}
+                             echo $productId ?>"
+                      
+                      style="font-size: xx-large;" >➜</a></li>
                       <li><a href="../main.php" style="font-size: xx-large;"  >Home</a></li>
                       <li><a href="../about2.php" style="font-size: xx-large;" >About</a></li>
                       <li><a href="../contact2.php" style="font-size: xx-large;" >Contact</a></li>
@@ -159,9 +166,14 @@ else {
                     $product = $result->fetch_assoc();
                     echo "<span class='products_details'>";
                     echo '<img class="product_image" src="' . $product['Image'] . '" alt="'.$product['Name'].'">';
+                    echo '<img class="product_size_chart" src="' . $product['size_chart'] . '" alt="'.$product['Name'].'">';
                     echo '<h2 class="product_heading">' . $product['Name'] . '</h2>';
-                    echo '<p class="product_description">' . $product['Description'] . '</p>';
-                    echo '<h1 class="product_price1">₹</h1><h2 class="product_price">' . $product['Price'] . '.00</h2><h1 class="product_price2">SAVE 15%</h1>';
+                    echo '<h2 class="product_description_heading">Description</h2>';
+                    echo '<div class="product_description">' . $product['Description'] . '</div>';
+                    echo '<div class="product_description_footer1">Manufactured by :';
+                    echo '<span class="product_description_footer2">Fashion Clothing Pvt Ltd , Dheera</span></div>';
+                    echo '<h1 class="product_price1">₹</h1><h2 class="product_price">' . $product['Price'] . '.00 
+                    </h2><h3 class="product_price3">' . $product['Old_Price'] . '</h3><h1 class="product_price2">' . $product['Save'] . '</h1><h5 class="product_price4">(incl. of all taxes)</h5>';
                     echo "</span>";
                 } else {
                     echo 'Product not found.';

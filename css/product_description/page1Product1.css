@@ -452,48 +452,149 @@ margin-right:1000px
     font-family: "Mplus 1p Bold";
 }
 
-
+/* image */
 .product_image{
-    position:absolute;
-    top: 300px;
-    left: 204px;
-    width: 526px;
-  }
+  position:absolute;
+  top: 300px;
+  left: 204px;
+  width: 526px;
+}
+
+/* size chart */
+.product_size_chart{
+  position:absolute;
+  top: 550px;
+  left: 904px;
+  width: 526px;
+  mix-blend-mode: multiply;
+}
 
 .product_price1  {
-    font-family: "Mplus 1p Bold";
-    color: #df8e14;
-    position:absolute;
-    top: 450px;
-    left: 904px;
-    width: 526px;
-}
-.product_price2  {
-    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-size: large;
-    background-color: #df8e14;
-    color: #ffffff;
-    position:absolute;
-    top: 450px;
-    left: 1250px;
-    width: 526px;
-    padding: 10px 10px 10px 10px;
+  font-family: "Mplus 1p Bold";
+  color: #df8e14;
+  position:absolute;
+  top: 430px;
+  left: 904px;
+  width: 526px;
 }
 
 .products_details .product_price  {
-    font-family: "Mplus 1p Bold";
-    color: #df8e14;
-    position:absolute;
-    top: 458px;
-    left: 924px;
-    width: 526px;
+  font-family: "Mplus 1p Bold";
+  color: #df8e14;
+  position:absolute;
+  top: 427px;
+  left: 924px;
+  width: 526px;
+  font-size: xx-large;
 }
 
-.products_details .product_description  {
+.product_price2  {
+  font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: large;
+  background-color: #df8e14;
+  color: #ffffff;
+  position:absolute;
+  top: 435px;
+  left: 1320px;
+  width: 88px;
+  padding: 5px 5px 5px 5px;
+  border-radius: 5px;
+}
+
+.product_price3  {
+  font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: x-large;
+  /* background-color: #df8e14; */
+  color: #202020;
+  position:absolute;
+  top: 430px;
+  left: 1100px;
+  width: 200px;
+  text-decoration: line-through;
+  /* padding: 5px 5px ; */
+}
+
+.product_price4  {
+  font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: large;
+  /* background-color: #df8e14; */
+  color: #202020;
+  position:absolute;
+  top: 460px;
+  left: 910px;
+  width: 200px;
+  /* padding: 5px 0px 5px 5px; */
+}
+
+/* product description heading */
+.product_description_heading {
+    position: absolute;
+    top: 640px;
+    left: 904px;
+    color: #070707;
+    font-size: 35px;
+    /* width: 800px; */
+    font-family: "Mplus 1p Bold";
+    text-decoration: underline;
+}
+
+/* description heading */
+.products_details .product_description .description_heading {
+    font-family: "Mplus 1p Bold";
+    font-size: x-large;
     color: #343232;
     position:absolute;
-    top: 700px;
+    top: 720px;
     left: 904px;
-    width: 526px;
+    width: 826px;
 }
 
+
+/* description para */
+.description_para{
+  font-family: "Mplus 1p Bold";
+  font-size: x-large;
+  color: #343232;
+  position:absolute;
+  top: 770px;
+  left: 904px;
+  width: 926px;
+}
+
+/* description list */
+.description_list{
+    font-family: "Mplus 1p Bold";
+    font-size: x-large;
+    color: #343232;
+    position:absolute;
+    top: 990px;
+    left: 904px;
+    width: 826px;
+}
+ul{
+  list-style-type:square;
+}
+/*description list item  */
+.description_item{
+  padding-bottom: 5px;
+
+}
+
+/* description footer */
+.product_description_footer1 , .product_description_footer2{
+  font-size: large;
+  font-family: "Mplus 1p Bold";
+  position: absolute;
+  width: 500px;
+  top: 1250px;
+  left: 904px;
+}
+.product_description_footer1{
+  font-weight:bolder;
+}
+.product_description_footer2{
+  font-size:16px;
+  top: 2px;
+  left: 184px;
+  
+}
