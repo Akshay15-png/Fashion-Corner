@@ -63,10 +63,10 @@
   }
   .footer {
     position: absolute;
-    top: 3846px;
+    top: 2146px;
     left: 126px;
     width: 1727px;
-    height: 61px;
+    height: 1px;
     text-align: left;
     font-size: var(--font-size-mini);
     color: var(--color-black);
@@ -231,6 +231,7 @@
   max-width: 1050px;
   width: 90%;
   margin: auto;
+  
 }
 
 .navbar {
@@ -324,7 +325,7 @@
 .navbar .menu-items {
   padding-top: 100px;
   /* box-shadow: inset 0 0 2000px rgba(0, 0, 0, 0.5); */
-  height: 2000px;
+  height: 650px;
   width: 100%;
   transform: translate(300%);
   display: flex;
@@ -335,7 +336,7 @@
   margin-left: 700px;
   transition: transform 0.2s ease-in-out;
   text-align: center;
-  z-index: 1099; /* Ensure a high z-index to keep menu on top */
+  z-index: 9; /* Ensure a high z-index to keep menu on top */
   position:relative;
   background-color: white;
 }
@@ -361,30 +362,44 @@ margin-right:1000px
 
 .menu-social-button1{
   position: absolute;
-  bottom: 3345px;
+  padding-top: 10px;
   left: 100px;
   border-radius: 50%;
   width: 49px;
   height: 46px;
   object-fit: cover;
 }
+.menu-social-button1:hover{
+  width: 52px;
+  height: 49px;
+}
+
 .menu-social-button2{
   position: absolute;
-  bottom: 3345px;
+  padding-top: 10px;
   left: 200px;
   border-radius: 50%;
   width: 49px;
   height: 46px;
   object-fit: cover;
 }
+.menu-social-button2:hover{
+  width: 52px;
+  height: 49px;
+}
+
 .menu-social-button3{
   position: absolute;
-  bottom: 3345px;
+  padding-top: 10px;
   left: 300px;
   border-radius: 50%;
   width: 49px;
   height: 46px;
   object-fit: cover;
+}
+.menu-social-button3:hover{
+  width: 52px;
+  height: 49px;
 }
 
 /* user profile */
@@ -434,7 +449,16 @@ margin-right:1000px
   }
 
 /* product details */
-/* styles.css */
+
+.back_button{
+  position: absolute;
+  top:170px;
+  left:200px;
+  cursor: pointer;
+  
+}
+
+
 .products_details {
     border: 1px solid #ccc;
     padding: 10px;
@@ -444,29 +468,47 @@ margin-right:1000px
 
 .products_details .product_heading {
     position: absolute;
-    top: 300px;
-    left: 904px;
+    top: 310px;
+    left: 1014px;
     color: #070707;
     font-size: 50px;
     /* width: 800px; */
     font-family: "Mplus 1p Bold";
 }
 
+
 /* image */
 .product_image{
   position:absolute;
   top: 300px;
-  left: 204px;
-  width: 526px;
+  left: 314px;
+  width: 524px;
+  height: 737px;
+  border-radius: 10px;
+
 }
 
-/* size chart */
-.product_size_chart{
-  position:absolute;
-  top: 550px;
-  left: 904px;
-  width: 526px;
-  mix-blend-mode: multiply;
+/* line 1 */
+
+.line_price{
+  position: absolute;
+  top:520px;
+  left: 1014px;
+  width: 455px;
+}
+
+.line_price2{
+  position: absolute;
+  top:1120px;
+  left: 314px;
+  width: 1330px;
+}
+
+.line_price3{
+  position: absolute;
+  top:1800px;
+  left: 314px;
+  width: 1330px;
 }
 
 .product_price1  {
@@ -474,7 +516,7 @@ margin-right:1000px
   color: #df8e14;
   position:absolute;
   top: 430px;
-  left: 904px;
+  left: 1014px;
   width: 526px;
 }
 
@@ -483,7 +525,7 @@ margin-right:1000px
   color: #df8e14;
   position:absolute;
   top: 427px;
-  left: 924px;
+  left: 1034px;
   width: 526px;
   font-size: xx-large;
 }
@@ -495,8 +537,8 @@ margin-right:1000px
   color: #ffffff;
   position:absolute;
   top: 435px;
-  left: 1320px;
-  width: 88px;
+  left: 1400px;
+  width: 100px;
   padding: 5px 5px 5px 5px;
   border-radius: 5px;
 }
@@ -508,7 +550,7 @@ margin-right:1000px
   color: #202020;
   position:absolute;
   top: 430px;
-  left: 1100px;
+  left: 1200px;
   width: 200px;
   text-decoration: line-through;
   /* padding: 5px 5px ; */
@@ -521,16 +563,69 @@ margin-right:1000px
   color: #202020;
   position:absolute;
   top: 460px;
-  left: 910px;
+  left: 1020px;
   width: 200px;
   /* padding: 5px 0px 5px 5px; */
+}
+
+/* available sizes */
+.available_sizes{
+  font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  position:absolute;
+  top: 580px;
+  left: 1026px;
+  width: 526px;
+  font-weight: bold;
+
+}
+
+/* size chart */
+.product_size_chart{
+  position:absolute;
+  top: 630px;
+  left: 1010px;
+  width: 526px;
+  mix-blend-mode: multiply;
+}
+
+/* Add to cart button */
+.add_cart{
+  position: absolute;
+  left: 1020px;
+  top: 920px;
+  min-height:50px ;
+  min-width: 580px;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: background-color 0.3s;
+  /* background-color: ; */
+  
+}
+.add_cart:hover{
+  background-color: #e4690e;
+  /* background-color: #218838;  */
+  /* background-color: #0056b3;  */ 
+}
+
+.add_cart_text{
+  font-family: "Mplus 1p Bold";
+  font-size: 23px;
+  font-weight: bolder;
+}
+
+/* full description  */
+.full_product_description{
+  position: absolute;
+  top: 400px;
+  left: 330px;
+  width: 1400px;
 }
 
 /* product description heading */
 .product_description_heading {
     position: absolute;
-    top: 640px;
-    left: 904px;
+    top: 780px;
+    /* left: 904px; */
     color: #070707;
     font-size: 35px;
     /* width: 800px; */
@@ -544,9 +639,9 @@ margin-right:1000px
     font-size: x-large;
     color: #343232;
     position:absolute;
-    top: 720px;
-    left: 904px;
-    width: 826px;
+    top: 860px;
+    /* left: 904px; */
+    /* width: 826px; */
 }
 
 
@@ -556,9 +651,9 @@ margin-right:1000px
   font-size: x-large;
   color: #343232;
   position:absolute;
-  top: 770px;
-  left: 904px;
-  width: 926px;
+  top: 910px;
+  /* left: 904px; */
+  /* width: 926px; */
 }
 
 /* description list */
@@ -567,9 +662,9 @@ margin-right:1000px
     font-size: x-large;
     color: #343232;
     position:absolute;
-    top: 990px;
-    left: 904px;
-    width: 826px;
+    top: 1050px;
+    /* left: 904px; */
+    /* width: 826px; */
 }
 ul{
   list-style-type:square;
@@ -586,8 +681,8 @@ ul{
   font-family: "Mplus 1p Bold";
   position: absolute;
   width: 500px;
-  top: 1250px;
-  left: 904px;
+  top: 1300px;
+  /* left: 904px; */
 }
 .product_description_footer1{
   font-weight:bolder;
@@ -598,3 +693,139 @@ ul{
   left: 184px;
   
 }
+
+/* quantity input */
+.quantity_body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  position: absolute;
+  top:840px;
+  left:1025px;
+  justify-content: center;
+  align-items: center;
+  max-height: 0;
+  margin: 0;
+  
+}
+
+.quantity_heading{
+  font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  position:absolute;
+  top: 760px;
+  left: 1031px;
+  width: 526px;
+  font-weight: bold;
+}
+
+.quantity {
+  display: flex;
+  border: 2px solid #b3b1b1;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.quantity button {
+
+  /* background-color: #434343; */
+  /* background-color: #ededed; */
+  transition: background-color 0.3s;
+  color: #000000;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+  width: 60px;
+  height: 50px;
+  text-align: center;
+  transition: background-color 0.2s;
+}
+
+.quantity button:hover {
+  background-color: #e4690e;
+}
+
+.input-box {
+  width: 40px;
+  text-align: center;
+  border: none;
+  padding: 8px 10px;
+  font-size: 16px;
+  outline: none;
+}
+
+/* Hide the number input spin buttons */
+.input-box::-webkit-inner-spin-button,
+.input-box::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* trust */
+.image-6-icon1 {
+  position:absolute;
+  top: 0;
+  left: 124px;
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+}
+.fashioncornertelegmailcom1 {
+  position:absolute;
+  top: 134px;
+  left: 0;
+}
+.image-5-icon1,
+.mail1 {
+  position:absolute;
+  top: 0;
+  left: 1236px;
+  width: 356px;
+  height: 170px;
+}
+.image-5-icon1 {
+  left: 35px;
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+}
+.return2 {
+  position:absolute;
+  top: 0;
+  left: 700px;
+  width: 228px;
+  height: 170px;
+}
+.free-fast1,
+.image-4-icon1 {
+  position:absolute;
+  top: 125px;
+  left: 0;
+}
+.image-4-icon1 {
+  top: 0;
+  left: 20px;
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+}
+.truck1,
+.trust1 {
+  position:absolute;
+  top: 9px;
+  left: 100px;
+  width: 244px;
+  height: 161px;
+}
+.trust1 {
+  top: 1900px;
+  left: 200px;
+  width: 1592px;
+  height: 170px;
+  text-align: left;
+  font-size: var(--buttons-size);
+  color: var(--color-black);
+  font-family: var(--font-mplus-1p-bold);
+}
+
+
+/* check */
