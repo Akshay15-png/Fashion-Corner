@@ -12,7 +12,7 @@
   position:absolute;
   top: 134px;
   left: 0;
-
+  width: 300px;
 }
 .image-5-icon1,
 .mail1 {
@@ -23,7 +23,7 @@
   height: 170px;
 }
 .image-5-icon1 {
-  left: 35px;
+  left: 55px;
   width: 100px;
   height: 100px;
   object-fit: cover;
@@ -40,10 +40,11 @@
   position:absolute;
   top: 125px;
   left: 0;
+  width: 300px;
 }
 .image-4-icon1 {
   top: 0;
-  left: 20px;
+  left: 60px;
   width: 100px;
   height: 100px;
   object-fit: cover;

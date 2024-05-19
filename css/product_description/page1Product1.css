@@ -61,7 +61,7 @@
     width: 100%;
     position: relative;
     background-color: var(--color-whitesmoke);
-    height: 3926px;
+    height: 3580px;
     overflow: hidden;
   }
   
@@ -654,7 +654,7 @@ ul{
 
 /* measure */
 .measure{
-  top: 1930px;
+  top: 1830px;
   left: 550px;
   position:absolute;
 }
@@ -678,6 +678,7 @@ ul{
   position:absolute;
   top: 134px;
   left: 0;
+  width: 300px;
 }
 .image-5-icon1,
 .mail1 {
@@ -688,7 +689,7 @@ ul{
   height: 170px;
 }
 .image-5-icon1 {
-  left: 35px;
+  left: 55px;
   width: 100px;
   height: 100px;
   object-fit: cover;
@@ -700,15 +701,15 @@ ul{
   width: 228px;
   height: 170px;
 }
-.free-fast1,
-.image-4-icon1 {
+.free-fast1 {
   position:absolute;
   top: 125px;
   left: 0;
 }
 .image-4-icon1 {
+  position:absolute;
   top: 0;
-  left: 20px;
+  left: 58px;
   width: 100px;
   height: 100px;
   object-fit: cover;
@@ -718,17 +719,17 @@ ul{
   position:absolute;
   top: 9px;
   left: 80px;
-  width: 244px;
+  width: 264px;
   height: 161px;
 }
 .line_price3{
   position: absolute;
-  top:3450px;
+  top:3300px;
   left: 130px;
   width: 1650px;
 }
 .trust1 {
-  top:3550px;
+  top:3400px;
   left: 200px;
   width: 1592px;
   height: 170px;

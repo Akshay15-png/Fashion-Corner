@@ -17,7 +17,7 @@ function login_mail() {
 
     // Simulate a 2-second delay before redirecting to login.html
     setTimeout(() => {
-        window.open('mailto:fashioncorner@telegmail.com', '_blank'); 
+        window.open('https://mail.google.com/mail/?view=cm&fs=1&to=fashioncorner@telegmail.com&su=Subject&body=Body%20text', '_blank'); 
     }, 2000); 
 }
 
@@ -50,7 +50,7 @@ function login_twitter() {
 
     // Simulate a 2-second delay before redirecting to login.html
     setTimeout(() => {
-        window.open('https://twitter.com/akshaydaisuke?lang=en', '_blank'); 
+        window.open('https://twitter.com/akshay__0', '_blank'); 
     }, 2000); 
 }
 // loading circle and jump to linkedin
