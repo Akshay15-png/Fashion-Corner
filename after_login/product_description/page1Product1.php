@@ -80,6 +80,7 @@ else {
   <body>
 
 <!-- loading circle -->
+<section class="full_body">
 <div id="loading-overlay">
   <div id="loading-spinner"></div>
 </div>
@@ -206,7 +207,9 @@ else {
         $con->close();
         ?>
 
-
+        <div class="measure">
+          <img  class="measure_img" src="../../assets/measurement.png" alt="">
+        </div>
   <!-- trust -->
   <section class="trust1">
     <div class="mail1">
@@ -223,43 +226,8 @@ else {
       <img class="image-4-icon1" alt="" src="../../assets/image-4@2x.png" />
     </div>
   </section>
-
-
-  <!-- footer -->
-  <footer class="footer">
-    <div class="social-media-parent social-media-icon">
-      <div class="social-media">
-        
-          <img class="twitter-icon" alt="twitter-logo" src="../../assets/ellipse-4@2x.png" onclick="login_twitter()"/>
-          <img class="insta-icon" alt="" src="../../assets/ellipse-3@2x.png"  onclick="login_instagram()"/>
-          <img class="facebook-icon" alt="" src="../../assets/ellipse-2@2x.png" onclick="login_facebook()"/>
-          <img class="email-icon" alt="" src="../../assets/ellipse-1@2x.png"  onclick="login_mail()"/>
-
-      </div>
-    </div>
-
-    <div class="footer-links">
-      <div class="links">
-        <div class="cookie-policy">
-          <a id="cookie-policies" href="../../privacy_policy.html"> Cookie Policy </a>
-        </div>
-        <div class="terms-of-service">
-          <a id="terms-conditions" href="../../privacy_policy.html"> Terms of Service </a>
-        </div>
-        <div class="privacy-policy">
-          <a id="privacy-policies" href="../../privacy_policy.html"> Privacy Policy </a>
-        </div>
-      </div>
-      <div class="tailor-shop-all">
-        © 2024 Fashion Corner. All rights reserved.
-      </div>
-    </div>
-    <img class="footer-child" alt="" src="../../assets/line-2@2x.png" />
-    
-    <img class="subscribe-child" alt="" src="../../assets/line-3@2x.png" style="padding-left: 75px;" />
-  </footer>  
 </div>
-
+</section>
 </body>
   
 </html>
