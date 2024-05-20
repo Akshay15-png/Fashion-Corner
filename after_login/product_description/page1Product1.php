@@ -76,7 +76,8 @@ else {
       }
     </style>
 
-  </head>
+
+</head>
   <body>
 
 <!-- loading circle -->
@@ -86,29 +87,29 @@ else {
 </div>
 
 <div class="index-page">
-  
-
-  
   <!-- nav bar -->
-  <section class="nav-bar" id="nav-bar">
-      <img class="fashion-corner-1-1" alt="logo" style="cursor: pointer;" src="../../assets/fashion-corner-1-1@2x.png" onclick="window.location.href='../main.php'"/>
-      <button class="hover-functioning4">
-        <img src="../../assets/cart_logo.png" class="cart_logo" alt="cart" >
-      </button>
+  <section class="nav-bar">
+          <button class="hover-functioning1" onclick="location.href='../main.php'">
+            <img class="fashion-corner-1-1" alt="logo" src="../../assets/fashion-corner-1-1@2x.png"/>
+          </button>
 
-      <!-- profile button -->
-      <div class="dropdown">
-        <button  class="hover-functioning4" onclick="toggleDropdown()">
-            <img src="../../assets/user_profile_icon.png" class="profile_logo" alt="profile" >
-        </button>
-        <div id="dropdownMenu" class="dropdown-content">
-            <span id="welcomeMessage">Welcome,<?php echo " $userName !"?></span>
-            <a href="#" class="profile-links">Orders</a>
-            <a href="#" class="profile-links">Cart</a>
-            <a href="#" class="profile-links">Return</a>
-            <a class="profile-links" onclick="logout()" >Logout</a>
-        </div>
-      </div>
+          <button class="hover-functioning2" onclick="location.href='./cart.php'">
+            <img src="../../assets/cart_logo.png" class="cart_logo" alt="cart" >
+          </button>
+
+          <!-- profile button -->
+          <div class="dropdown">
+            <button  class="hover-functioning3" onclick="toggleDropdown()">
+                <img src="../../assets/user_profile_icon.png" class="profile_logo" alt="profile" >
+            </button>
+            <div id="dropdownMenu" class="dropdown-content">
+                <span id="welcomeMessage">Welcome,<?php echo " $userName !"?></span>
+                <a href="#" class="profile-links">Orders</a>
+                <a href="./cart.php" class="profile-links">Cart</a>
+                <a href="#" class="profile-links">Return</a>
+                <a class="profile-links" onclick="logout()" >Logout</a>
+            </div>
+          </div>
 
       <!-- menu button -->
       <button class="hover-functioning4">
@@ -180,10 +181,10 @@ else {
                 
                 // product quantity
                 echo '<span class="quantity_heading">Quantity :</span> ';
-                echo '<div class="quantity_body"><div class="quantity "><button class="minus" aria-label="Decrease">&minus;</button><input type="number" class="input-box" value="1" min="1" max="10" maxlength="2"><button class="plus" aria-label="Increase">&plus;</button></div></div>';
+                echo '<div class="quantity_body"><div class="quantity "><button class="minus" aria-label="Decrease">&minus;</button><input type="number" class="input-box" id="quantity_value" name="quantity_value" value="1" min="1" max="10" maxlength="2"><button class="plus" aria-label="Increase">&plus;</button></div></div>';
 
                 // product add to cart
-                echo '<button class="add_cart"><p class="add_cart_text">Add to cart</p><button></div>';
+                echo '<button class="add_cart" id="addToCartButton" type="submit" onclick=""><p class="add_cart_text">Add to cart</p><button></div>';
                 
                 // product description
                 echo '<hr class="line_price2"  style="padding-left: 75px;" />';
@@ -204,33 +205,35 @@ else {
         } else {
             echo 'Product ID not specified.';
         }
+        
         $con->close();
         ?>
 
         <div class="measure">
           <img  class="measure_img" src="../../assets/measurement.png" alt="">
         </div>
-  <!-- trust -->
-  <section class="trust1">
-    <div class="mail1">
-      <img class="image-6-icon1" alt="" src="../../assets/image-6@2x.png" />
 
-      <b class="fashioncornertelegmailcom1">fashioncorner@telegmail.com</b>
-    </div>
-    <div class="return2">
-      <b class="fashioncornertelegmailcom1">Return with 7 days</b>
-      <img class="image-5-icon1" alt="" src="../../assets/image-5@2x.png" />
-    </div>
-    <div class="truck1">
-      <b class="free-fast1">Free & Fast Delivery</b>
-      <img class="image-4-icon1" alt="" src="../../assets/image-4@2x.png" />
-    </div>
-  </section>
-</div>
-</section>
-</body>
-  
-</html>
+        <!-- trust -->
+        <section class="trust1">
+          <div class="mail1">
+            <img class="image-6-icon1" alt="" src="../../assets/image-6@2x.png" />
+
+            <b class="fashioncornertelegmailcom1">fashioncorner@telegmail.com</b>
+          </div>
+          <div class="return2">
+            <b class="fashioncornertelegmailcom1">Return with 7 days</b>
+            <img class="image-5-icon1" alt="" src="../../assets/image-5@2x.png" />
+          </div>
+          <div class="truck1">
+            <b class="free-fast1">Free & Fast Delivery</b>
+            <img class="image-4-icon1" alt="" src="../../assets/image-4@2x.png" />
+          </div>
+        </section>
+      </div>
+      </section>
+      </body>
+        
+      </html>
 
 <!-- back button -->
 <script>
@@ -298,4 +301,59 @@ else {
         }
       })();
       
+</script>
+
+<!-- cart -->
+<script>
+
+        // sold out product IDs
+        const restrictedProductIds = [21313, 21315, 21318, 21319, 21322, 21328];
+
+        // get product id from php
+        let productId = <?php include '../../php/db_connection.php' ; if (isset($_GET['ID'])) {$productId = intval($_GET['ID']); $sql = "SELECT * FROM product_details WHERE ID = $productId"; $result = $con->query($sql); echo "$product[ID]"; ;} ?>;
+
+        // disable add to cart button 
+        let addToCartButton = document.getElementById("addToCartButton");
+        if (restrictedProductIds.includes(productId)) {
+            addToCartButton.disabled = true;
+            addToCartButton.style.cursor = "not-allowed";
+            addToCartButton.title = "This product is temporarily out of stock.";
+        }
+
+
+        document.getElementById("addToCartButton").addEventListener("click", function() {
+          if (addToCartButton.disabled) {
+                alert("This product is temporarily out of stock.");
+                return;
+          }
+
+            let quantity = document.getElementById("quantity_value").value;
+            let product = { name: "<?php
+                                    include '../../php/db_connection.php' ;
+
+                                    if (isset($_GET['ID'])) {
+                                    $productId = intval($_GET['ID']);
+    
+                                    $sql = "SELECT * FROM product_details WHERE ID = $productId";
+                                    $result = $con->query($sql);
+                                    echo "$product[Name]";
+                                    }?>", quantity: quantity };
+
+            // check for cart in localstorage
+            let cart = localStorage.getItem("cart");
+            if (cart) {
+                cart = JSON.parse(cart);
+            } else {
+                cart = [];
+            }
+
+            // add product to cart
+            cart.push(product);
+
+            // save cart to localStorage
+            localStorage.setItem("cart", JSON.stringify(cart));
+
+            // // redirect to Cart Page
+            window.location.href = "./cart.php";
+        });
 </script>

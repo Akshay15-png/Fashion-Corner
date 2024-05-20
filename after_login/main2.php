@@ -86,24 +86,24 @@ else {
     <div class="index-page">
       
       <!-- nav bar -->
-      <section class="nav-bar" id="nav-bar">
-        <a href="./main.php">
-          <img class="fashion-corner-1-1" alt="logo" src="../assets/fashion-corner-1-1@2x.png"/>
-        </a>
+      <section class="nav-bar">
+          <button class="hover-functioning1" onclick="location.href='./main.php'">
+            <img class="fashion-corner-1-1" alt="logo" src="../assets/fashion-corner-1-1@2x.png"/>
+          </button>
 
-        <button class="hover-functioning4">
-          <img src="../assets/cart_logo.png" class="cart_logo" alt="cart" onclick="login()">
-        </button>
+          <button class="hover-functioning2" onclick="location.href='./product_description/cart.php'">
+            <img src="../assets/cart_logo.png" class="cart_logo" alt="cart" >
+          </button>
 
-        <!-- profile button -->
-        <div class="dropdown">
-            <button  class="hover-functioning4" onclick="toggleDropdown()">
+          <!-- profile button -->
+          <div class="dropdown">
+            <button  class="hover-functioning3" onclick="toggleDropdown()">
                 <img src="../assets/user_profile_icon.png" class="profile_logo" alt="profile" >
             </button>
             <div id="dropdownMenu" class="dropdown-content">
                 <span id="welcomeMessage">Welcome,<?php echo " $userName !"?></span>
                 <a href="#" class="profile-links">Orders</a>
-                <a href="#" class="profile-links">Cart</a>
+                <a href="./product_description/cart.php" class="profile-links">Cart</a>
                 <a href="#" class="profile-links">Return</a>
                 <a class="profile-links" onclick="logout()" >Logout</a>
             </div>

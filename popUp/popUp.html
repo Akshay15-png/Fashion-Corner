@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fade Out Pop-up</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #f0f0f0;
+    }
+
+    .popup {
+        background-color: #ffffff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+        animation: fadeIn 0.5s ease-out forwards;
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(-20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .fade-out {
+        animation: fadeOut 0.5s ease-in forwards;
+    }
+
+    @keyframes fadeOut {
+        from {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        to {
+            opacity: 0;
+            transform: translateY(-20px);
+        }
+    }
+</style>
+</head>
+<body>
+<div class="popup" id="popup">
+    <h2>This is a fade-out pop-up</h2>
+    <p>This pop-up will fade out automatically after a certain duration.</p>
+</div>
+
+<script>
+    // Set the duration for the pop-up to remain visible (in milliseconds)
+    var popupDuration = 5000; // 5000ms = 5 seconds
+
+    // Function to fade out the pop-up
+    function fadeOutPopup() {
+        var popup = document.getElementById('popup');
+        popup.classList.add('fade-out');
+        setTimeout(function() {
+            popup.style.display = 'none';
+        }, 500); // 500ms is the duration of fadeOut animation
+    }
+
+    // Automatically fade out the pop-up after a certain duration
+    setTimeout(fadeOutPopup, popupDuration);
+</script>
+</body>
+</html>

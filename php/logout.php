@@ -1,14 +1,14 @@
 <?php
-// Start or resume the session
+// resume the session
 session_start();
 
-// Unset all session variables
+// unnset all session variables
 session_unset();
 
-// Destroy the session
+// destroy session
 session_destroy();
 
-// Redirect to login page
+// redirect to login page
 header("Location: ../login.html");
-exit; // Stop further script execution
+exit; 
 ?>

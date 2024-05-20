@@ -16,7 +16,24 @@ function toggleDropdown() {
 function logout() {
     document.getElementById('loading-overlay').style.visibility = 'visible';
     setTimeout(() => {
-        window.location.href = "../php/logout.php";
+        function tryRedirect(url, secondaryUrl) {
+            fetch(url, { method: 'HEAD' })
+                .then(response => {
+                    if (response.ok) {
+                        window.location.href = url;
+                    } else {
+                        window.location.href = secondaryUrl;
+                    }
+                })
+                .catch(error => {
+                    window.location.href = secondaryUrl;
+                });
+        }
+        
+        const primaryUrl = "../php/logout.php";
+        const secondaryUrl = "../../php/logout.php";
+        tryRedirect(primaryUrl, secondaryUrl);
+        
     }, 2000);
 }
 

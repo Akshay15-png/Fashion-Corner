@@ -9,6 +9,4 @@
     if ($con->connect_error) {
     die("Connection Failed. ".mysqli_connect_error());
     }
-
-    // $con->close();
 ?>
