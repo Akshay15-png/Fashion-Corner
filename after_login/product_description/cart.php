@@ -88,6 +88,7 @@ else {
 
 <div class="index-page">
   
+  
 
   
   <!-- nav bar -->
@@ -154,24 +155,129 @@ else {
   </section>
 
   <!-- cart section -->
-    <div id="cartItems"></div>
-
+<section>
+    <!-- empty whole cart -->
+  <button id="clearCartButton" ><p style="font-size: 20px;position:relative;top: -15px;cursor: pointer;" class="clear_txt">clear</p></button>
+  <h1 id="shopping_cart_heading"> Shopping Cart</h1>
+  
+  <div class="proceed_to_buy">
+    <button id="buyFromCartButton">Buy</button>
+    <button id="removeFromCartButton">remove</button>
+  </div>
+  
+  <div id="cartItems">
+    
+    </div>
+    
+</section>
     
 </body>
 </html>
+
+
+
+
 <script>
-        // Get the cart from localStorage
+        // get cart from localstorage
         let cart = localStorage.getItem("cart");
         if (cart) {
             cart = JSON.parse(cart);
-
-            let cartItemsDiv = document.getElementById("cartItems");
-            cart.forEach(item => {
-                let itemDiv = document.createElement("div");
-                itemDiv.textContent = `${item.name} - Quantity: ${item.quantity}`;
-                cartItemsDiv.appendChild(itemDiv);
-            });
         } else {
-            document.getElementById("cartItems").textContent = "Your cart is empty.";
+            cart = [];
         }
-    </script>
+
+        // display cart items
+        function displayCartItems() {
+            const cartItemsContainer = document.getElementById("cartItems");
+            cartItemsContainer.innerHTML = "";
+
+            if (cart.length === 0) {
+                cartItemsContainer.innerHTML = "<p>Your cart is empty.</p>";
+                return;
+            }
+
+            cart.forEach(item => {
+                const cartItemElement = document.createElement("div");
+                cartItemElement.classList.add("cart-item");           //class name for div
+
+                const imageElement = document.createElement("img");
+                imageElement.src = item.image;
+                imageElement.alt = item.name;
+                imageElement.classList.add("item-image");             //class name for image
+
+                const detailsElement = document.createElement("div");
+                detailsElement.classList.add("cart-item-details");      //class name for div
+                detailsElement.innerHTML = `<strong>${item.name}</strong><br><br><span class="stock">In Stock</span><br><span class="incl_all_tx" >Eligible for free shipping</span><div></div><span class="cart_price"> ₹ ${item.price}.00 </span><br><span class="incl_all_tx" id="incls_tx">(incl. of all taxes)</span> <div class="quantity "><button class="minus" aria-label="Decrease">&minus;</button><input type="number" class="input-box" id="quantity_value" name="quantity_value" value="${item.quantity}" min="1" max="10" maxlength="2"><button class="plus" aria-label="Increase">&plus;</button></div>`;
+
+                cartItemElement.appendChild(imageElement);
+                cartItemElement.appendChild(detailsElement);
+
+                cartItemsContainer.appendChild(cartItemElement);
+            });
+        }
+
+        // Display cart items on page load
+        displayCartItems();
+
+        // clear whole cart
+        document.getElementById("clearCartButton").addEventListener("click", function() {
+            localStorage.removeItem("cart");
+            location.reload();
+            // alert("Cart has been emptied.");
+        });
+
+</script>
+
+<!-- quantity -->
+<script>
+    (function () {
+        const quantityContainer = document.querySelector(".quantity");
+        const minusBtn = quantityContainer.querySelector(".minus");
+        const plusBtn = quantityContainer.querySelector(".plus");
+        const inputBox = quantityContainer.querySelector(".input-box");
+      
+        updateButtonStates();
+      
+        quantityContainer.addEventListener("click", handleButtonClick);
+        inputBox.addEventListener("input", handleQuantityChange);
+      
+        function updateButtonStates() {
+          const value = parseInt(inputBox.value);
+          minusBtn.disabled = value <= 1;
+          plusBtn.disabled = value >= parseInt(inputBox.max);
+        }
+      
+        function handleButtonClick(event) {
+          if (event.target.classList.contains("minus")) {
+            decreaseValue();
+          } else if (event.target.classList.contains("plus")) {
+            increaseValue();
+          }
+        }
+      
+        function decreaseValue() {
+          let value = parseInt(inputBox.value);
+          value = isNaN(value) ? 1 : Math.max(value - 1, 1);
+          inputBox.value = value;
+          updateButtonStates();
+          handleQuantityChange();
+        }
+      
+        function increaseValue() {
+          let value = parseInt(inputBox.value);
+          value = isNaN(value) ? 1 : Math.min(value + 1, parseInt(inputBox.max));
+          inputBox.value = value;
+          updateButtonStates();
+          handleQuantityChange();
+        }
+      
+        function handleQuantityChange() {
+          let value = parseInt(inputBox.value);
+          value = isNaN(value) ? 1 : value;
+      
+          // Execute your code here based on the updated quantity value
+          console.log("Quantity changed:", value);
+        }
+      })();
+      
+</script>

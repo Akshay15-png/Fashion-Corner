@@ -14,7 +14,7 @@ function login() {
 function login_mail() {
     // Show loading 
     document.getElementById('loading-overlay').style.visibility = 'visible';
-
+    
     // Simulate a 2-second delay before redirecting to login.html
     setTimeout(() => {
         window.open('https://mail.google.com/mail/?view=cm&fs=1&to=fashioncorner@telegmail.com&su=Subject&body=Body%20text', '_blank'); 
@@ -25,7 +25,7 @@ function login_mail() {
 function login_facebook() {
     // Show loading 
     document.getElementById('loading-overlay').style.visibility = 'visible';
-
+    
     // Simulate a 2-second delay before redirecting to login.html
     setTimeout(() => {
         window.open('https://www.facebook.com', '_blank'); 
@@ -36,7 +36,7 @@ function login_facebook() {
 function login_instagram() {
     // Show loading 
     document.getElementById('loading-overlay').style.visibility = 'visible';
-
+    
     // Simulate a 2-second delay before redirecting to login.html
     setTimeout(() => {
         window.open('https://www.instagram.com/akshay212046/', '_blank'); 
@@ -47,7 +47,7 @@ function login_instagram() {
 function login_twitter() {
     // Show loading 
     document.getElementById('loading-overlay').style.visibility = 'visible';
-
+    
     // Simulate a 2-second delay before redirecting to login.html
     setTimeout(() => {
         window.open('https://twitter.com/akshay__0', '_blank'); 
@@ -57,7 +57,7 @@ function login_twitter() {
 function login_linkedin() {
     // Show loading 
     document.getElementById('loading-overlay').style.visibility = 'visible';
-
+    
     // Simulate a 2-second delay before redirecting to login.html
     setTimeout(() => {
         window.open('https://www.linkedin.com/in/akshay-katoch-36a86b23a', '_blank'); 
@@ -71,3 +71,13 @@ function showLoading() {
     document.getElementById('loading-overlay').style.display = 'flex';
 }
 
+// add cart
+function cart_adding() {
+    // Show loading 
+    document.getElementById('loading-overlay').style.visibility = 'visible';
+
+    // Simulate a 2-second delay before redirecting to login.html
+    setTimeout(() => {
+        location.href=('./cart.php'); 
+    }, 2000); 
+}

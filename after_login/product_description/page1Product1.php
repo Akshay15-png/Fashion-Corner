@@ -184,7 +184,7 @@ else {
                 echo '<div class="quantity_body"><div class="quantity "><button class="minus" aria-label="Decrease">&minus;</button><input type="number" class="input-box" id="quantity_value" name="quantity_value" value="1" min="1" max="10" maxlength="2"><button class="plus" aria-label="Increase">&plus;</button></div></div>';
 
                 // product add to cart
-                echo '<button class="add_cart" id="addToCartButton" type="submit" onclick=""><p class="add_cart_text">Add to cart</p><button></div>';
+                echo '<button class="add_cart" id="addToCartButton" type="submit" onclick="cart_adding()"><p class="add_cart_text">Add to cart</p><button></div>';
                 
                 // product description
                 echo '<hr class="line_price2"  style="padding-left: 75px;" />';
@@ -209,6 +209,7 @@ else {
         $con->close();
         ?>
 
+        <!-- measurement -->
         <div class="measure">
           <img  class="measure_img" src="../../assets/measurement.png" alt="">
         </div>
@@ -230,10 +231,10 @@ else {
           </div>
         </section>
       </div>
-      </section>
-      </body>
+    </section>
+  </body>
         
-      </html>
+</html>
 
 <!-- back button -->
 <script>
@@ -337,7 +338,31 @@ else {
                                     $sql = "SELECT * FROM product_details WHERE ID = $productId";
                                     $result = $con->query($sql);
                                     echo "$product[Name]";
-                                    }?>", quantity: quantity };
+                                    }?>",
+                                    
+                            image: "<?php
+                                    include '../../php/db_connection.php' ;
+
+                                    if (isset($_GET['ID'])) {
+                                    $productId = intval($_GET['ID']);
+                                    
+                                    $sql = "SELECT * FROM product_details WHERE ID = $productId";
+                                    $result = $con->query($sql);
+                                    echo "$product[Image]";
+                                    }?>",
+
+                            price: "<?php
+                                    include '../../php/db_connection.php' ;
+
+                                    if (isset($_GET['ID'])) {
+                                    $productId = intval($_GET['ID']);
+                                    
+                                    $sql = "SELECT * FROM product_details WHERE ID = $productId";
+                                    $result = $con->query($sql);
+                                    echo "$product[Price]";
+                                    }?>",
+                            quantity: quantity
+                          };
 
             // check for cart in localstorage
             let cart = localStorage.getItem("cart");
@@ -353,7 +378,18 @@ else {
             // save cart to localStorage
             localStorage.setItem("cart", JSON.stringify(cart));
 
-            // // redirect to Cart Page
-            window.location.href = "./cart.php";
+          
         });
+</script>
+
+<!-- loading -->
+<script>
+
+
+    // function showLoading() {
+    //     document.getElementById('loading-overlay').style.display = 'flex';
+    //     setTimeout(() => {
+    //     window.open('https://www.linkedin.com/in/akshay-katoch-36a86b23a', '_blank'); 
+    // }, 2000); 
+    // }
 </script>
