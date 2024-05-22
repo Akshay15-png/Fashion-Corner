@@ -359,7 +359,17 @@ else {
                                     
                                     $sql = "SELECT * FROM product_details WHERE ID = $productId";
                                     $result = $con->query($sql);
-                                    echo "$product[Price]";
+                                    echo "$product[Actual_Price]";
+                                    }?>",
+                            id: "<?php
+                                    include '../../php/db_connection.php' ;
+
+                                    if (isset($_GET['ID'])) {
+                                    $productId = intval($_GET['ID']);
+                                    
+                                    $sql = "SELECT * FROM product_details WHERE ID = $productId";
+                                    $result = $con->query($sql);
+                                    echo "$product[ID]";
                                     }?>",
                             quantity: quantity
                           };
@@ -382,14 +392,3 @@ else {
         });
 </script>
 
-<!-- loading -->
-<script>
-
-
-    // function showLoading() {
-    //     document.getElementById('loading-overlay').style.display = 'flex';
-    //     setTimeout(() => {
-    //     window.open('https://www.linkedin.com/in/akshay-katoch-36a86b23a', '_blank'); 
-    // }, 2000); 
-    // }
-</script>

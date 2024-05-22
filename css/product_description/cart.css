@@ -384,64 +384,32 @@ margin-right:1000px
     text-align: center;
     
   }
-/* quantity button */
-
-.quantity {
-  display:absolute;
-  border: 2px solid #b3b1b1;
-  border-radius: 4px;
-  overflow:hidden;
-  width: 200px;
-  margin-left: 300px;
+  .back_button{
+    position: absolute;
+    top:160px;
+    left:150px;
+    cursor: pointer;
+    
+  }
+  /* quantity */
+.quantity{
   position: relative;
-  top: -60px;
-  /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
+  left: 365px;
+  top: -70px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: large;
+  font-weight: 700;
 }
-.quantity button {
-  
-  /* background-color: #434343; */
-  /* background-color: #ededed; */
-  /* margin-top: 100px; */
-  transition: background-color 0.3s;
-  /* color: #000000; */
-  border: none;
-  cursor: pointer;
-  font-size: 20px;
-  width: 70px;
-  height: 50px;
-  text-align: center;
-}
-
-.quantity button:hover {
-  background-color: #e4690e;
-}
-
-.input-box {
-  width: 40px;
-  text-align: center;
-  border: none;
-  padding: 12px 10px;
-  font-size: 16px;
-  outline: none;
-}
-
-/* Hide the number input spin buttons */
-.input-box::-webkit-inner-spin-button,
-.input-box::-webkit-outer-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-
 
 #cartItems{
   position: absolute;
-  top: 300px;
+  top: 400px;
   left: 300px;
   font-size: xx-large;
 
 }
 #shopping_cart_heading{
-  top:200px;
+  top:250px;
   left:200px;
   font-size: 34px;
   font-family: "Mplus 1p Bold";
@@ -450,7 +418,7 @@ margin-right:1000px
 
 /* empty whole cart button */
 #clearCartButton{
-  top:210px;
+  top:280px;
   left:1800px;
   position:absolute;
   height:40px;
@@ -466,16 +434,66 @@ margin-right:1000px
 
 /* buy product */
 .proceed_to_buy{
-  padding: 40px 40px 40px 40px;
+  padding: 40px 40px 40px 50px;
   border: 2px solid black;
   border-radius: 10px;
   position: relative;
-  top:-3280px;
-  left:1200px;
-  width: 300px;
-  height: 400px;
+  top:-3177px;
+  left:1250px;
+  width: 340px;
+  height: 350px;
 }
-#buyFromCartButton{}
+.proceed_txt,.total_item_no ,.total_price_no{
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 700;
+}
+.eligible{
+  color: #067d62;
+}
+.choose{
+  position: relative;
+  top: -15px;
+}
+.green_tick{
+  width: 20px;
+}
+.total_item_no{
+  font-size: x-large;
+}
+.total_price_no{
+  font-size: x-large;
+  color: #df8e14;
+  position: relative;
+  left: 235px;
+  top: -54px;
+}
+.div_pack_gift{
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 600;
+  position: relative;
+  top: -60px;
+  font-size: large;
+}
+
+
+#buyFromCartButton{
+  padding: 5px 15px 5px 15px;
+  border-radius: 10px;
+  border: 2px solid #df8e14;
+  background-color: #e5a950;
+  cursor: pointer;
+  position: relative;
+  left: 50px;
+  /* top: -100px; */
+  font-size: x-large;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  transition:transform 0.5s ease-in-out ;
+}
+#buyFromCartButton:hover{
+  background-color: #df8e14;
+  
+}
+
 
 /* for each product item */
 .cart-item{
@@ -535,4 +553,23 @@ font-family: "Mplus 1p Bold";
   color: #df8e14;
   position: relative;
   font-weight: bolder;
+}
+/* delete item */
+.clearItemButton{
+  position: relative;
+  top: -20px;
+  background: transparent;
+  border: 0;
+  font-weight: bolder;
+  font-size: large;
+  color: rgb(141, 49, 42);
+  left: 365px;
+
+  
+}
+.clearItemButton:hover
+{
+  text-decoration: underline rgb(141, 49, 42);
+  cursor: pointer;
+  font-weight: 750;
 }

@@ -78,6 +78,8 @@ function cart_adding() {
 
     // Simulate a 2-second delay before redirecting to login.html
     setTimeout(() => {
-        location.href=('./cart.php'); 
-    }, 2000); 
+        // location.href=('./cart.php'); 
+        location.reload();
+        alert("Item added in cart") 
+    }, 1000);
 }
