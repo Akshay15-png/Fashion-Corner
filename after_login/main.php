@@ -75,7 +75,7 @@ else {
       }
     </style>
   </head>
-  <body>
+  <body style="overflow-x:hidden;">
 
     <!-- loading circle -->
     <div id="loading-overlay">

@@ -168,7 +168,7 @@ else {
     <!-- gift -->
     <div class="div_pack_gift"><input type="checkbox" name="gift" id="pack_as_gift">This order contains a gift</div>
     
-    <button id="buyFromCartButton">Proceed to Shop</button>
+    <button id="buyFromCartButton" onclick="proceed_tobuy_item()">Proceed to Shop</button>
     <div id="cartItemsContainer"></div>
 </div>
 
@@ -194,10 +194,15 @@ else {
             const cartItemsContainer = document.getElementById("cartItems");
             const totalItemsElement = document.getElementById("totalItems");
             const totalPriceElement = document.getElementById("totalPrice");
+            const buyButton = document.getElementById('buyFromCartButton');
             cartItemsContainer.innerHTML = "";
 
             if (cart.length === 0) {
-                cartItemsContainer.innerHTML = "<p>Your cart is empty.</p>";
+                buyButton.disabled = true;
+                buyButton.addEventListener('mouseover', function() {
+                    this.style.cursor = 'not-allowed';
+                });
+                buyButton.title = "Your cart is empty";
                 return;
             }
 
