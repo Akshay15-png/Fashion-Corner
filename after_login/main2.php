@@ -102,7 +102,7 @@ else {
             </button>
             <div id="dropdownMenu" class="dropdown-content">
                 <span id="welcomeMessage">Welcome,<?php echo " $userName !"?></span>
-                <a href="#" class="profile-links">Orders</a>
+                <a href="./product_description/orders_list.php" class="profile-links">Orders History</a>
                 <a href="./product_description/cart.php" class="profile-links">Cart</a>
                 <a href="#" class="profile-links">Return</a>
                 <a class="profile-links" onclick="logout()" >Logout</a>

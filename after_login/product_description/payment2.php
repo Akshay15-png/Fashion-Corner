@@ -28,7 +28,7 @@ else {
 
 <body> 
 	<div class="container"> 
-		<form action="../../php/orders.php" method="Post"> 
+		<form action="../../php/orders.php" method="POST"> 
 
 			<div class="row"> 
 				<div class="col" style="padding-right:30px"> 
@@ -70,6 +70,9 @@ else {
 			</div> 
 
 			<!-- total cost and item -->
+			<input type="hidden" name="productID" id="productID">
+			<input type="hidden" name="productName" id="productName">
+			<input type="hidden" name="productImage" id="productImage">
 			<input type="hidden" name="totalItems" id="totalItems">
             <input type="hidden" name="totalPrice" id="totalPrice">
 			<button class="submit_btn" style="border-radius:10px" onclick="location.href='./qr_page.php'">Proceed to Checkout</button> 
@@ -86,11 +89,18 @@ else {
     }
 
     function displayCartItems() {
+		const cartItemsProductID = document.getElementById("productID");
+		const cartItemsProductName = document.getElementById("productName");
+		const cartItemsProductImage = document.getElementById("productImage");
         let totalItems = 0;
         let totalPrice = 0;
         cart.forEach(item => {
             totalItems += parseInt(item.quantity);
             totalPrice += parseInt(item.price) * parseInt(item.quantity);
+
+            cartItemsProductImage.value = item.image;
+			cartItemsProductName.value = item.name
+			cartItemsProductID.value = item.id
         });
 
         // Set hidden input values

@@ -17,11 +17,6 @@ $address=$_POST["address"];
 $city=$_POST["city"];
 $state=$_POST["state"];
 $pinCode=$_POST["pincode"];
-$cardName=$_POST["cardname"];
-$cardNo=$_POST["cardno"];
-$expMonth=$_POST["expmonth"];
-$expYear=$_POST["expyear"];
-$cvv=$_POST["cvv"];
 $productID=$_POST["productID"];
 $productName=$_POST["productName"];
 $productImage=$_POST["productImage"];
@@ -40,8 +35,8 @@ if ($result->num_rows > 0) {
     exit();
 }
 
-$insertQuery = "INSERT INTO `orders`(`orderID`,`FullName`, `EmailAddress`, `Address`, `City`, `State`, `PinCode`, `CardName`, `CardNo`, `ExpYear`, `ExpMonth`, `cvv`, `productID`, `productName`, `productImage`, `Items`,`Status`,`Total_Cost`, `Date/Time`) VALUES 
-            ('$orderID','$fullName', '$emailAddress', '$address', '$city', '$state', '$pinCode','$cardName','$cardNo','$expMonth','$expYear','$cvv', '$productID' ,'$productName' ,'$productImage','$totalItem','Active','$totalCost', current_timestamp())";
+$insertQuery = "INSERT INTO `orders`(`orderID`,`FullName`, `EmailAddress`, `Address`, `City`, `State`, `PinCode`, `productID`, `productName`, `productImage`, `Items`, `Status`, `Total_Cost`, `Date/Time`) VALUES 
+            ('$orderID','$fullName', '$emailAddress', '$address', '$city', '$state', '$pinCode', '$productID' , '$productName' , '$productImage' , '$totalItem' , 'Active' , '$totalCost' , current_timestamp())";
 
 if ($con->query($insertQuery) === TRUE) {
     sleep(1);

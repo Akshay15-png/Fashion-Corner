@@ -1,16 +1,31 @@
 <?php
 include("./db_connection.php");
+
+function generateRandomString($length = 8) {
+    $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    $charactersLength = strlen($characters);
+    $randomString = '';
+    for ($i = 0; $i < $length; $i++) {
+        $randomString .= $characters[rand(0, $charactersLength - 1)];
+    }
+    return $randomString;
+}
+
 $fullName=$_POST["fullname"];
 $emailAddress=$_POST["emailaddress"];
 $address=$_POST["address"];
 $city=$_POST["city"];
 $state=$_POST["state"];
 $pinCode=$_POST["pincode"];
+$productID=$_POST["productID"];
+$productName=$_POST["productName"];
+$productImage=$_POST["productImage"];
 $totalItem=$_POST["totalItems"];
 $totalCost=$_POST["totalPrice"];
-
+$orderID = generateRandomString();
+ 
 // check data already exists 
-$checkQuery = "SELECT * FROM `orders` WHERE `EmailAddress` = '$emailAddress' AND `Items` = '$totalItem' AND `Total_Cost` = '$totalCost'   ";
+$checkQuery = "SELECT * FROM `orders` WHERE `EmailAddress` = '$emailAddress' AND `Items` = '$totalItem' AND `Total_Cost` = '$totalCost' AND `Status` ='Active'  ";
 $result = $con->query($checkQuery);
 
 if ($result->num_rows > 0) {
@@ -20,8 +35,8 @@ if ($result->num_rows > 0) {
     exit();
 }
 
-$insertQuery = "INSERT INTO `orders`(`FullName`, `EmailAddress`, `Address`, `City`, `State`, `PinCode`, `Items`, `Total_Cost`, `Date/Time`)
-                VALUES ('$fullName', '$emailAddress', '$address', '$city', '$state', '$pinCode', '$totalItem','$totalCost', current_timestamp())";
+$insertQuery = "INSERT INTO `orders`(`orderID`,`FullName`, `EmailAddress`, `Address`, `City`, `State`, `PinCode`, `productID`, `productName`, `productImage`, `Items`,`Status`, `Total_Cost`, `Date/Time`)
+                VALUES ('$orderID','$fullName', '$emailAddress', '$address', '$city', '$state', '$pinCode', '$productID' ,'$productName' ,'$productImage', '$totalItem','Cancel','$totalCost', current_timestamp())";
 
 if ($con->query($insertQuery) === TRUE) {
     sleep(1);

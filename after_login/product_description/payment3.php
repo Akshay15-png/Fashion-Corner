@@ -28,7 +28,7 @@ else {
 
 <body> 
 	<div class="container"> 
-		<form action="../../php/orders2.php" method="Post"> 
+		<form action="../../php/order3.php" method="POST"> 
 
 			<div class="row"> 
 				<div class="col" style="padding-right:30px"> 
@@ -70,12 +70,50 @@ else {
 			</div> 
 
 			<!-- total cost and item -->
+			<input type="hidden" name="productID" id="productID">
+			<input type="hidden" name="productName" id="productName">
+			<input type="hidden" name="productImage" id="productImage">
 			<input type="hidden" name="totalItems" id="totalItems">
             <input type="hidden" name="totalPrice" id="totalPrice">
-			<button class="submit_btn" style="border-radius:10px" onclick="location.href='./qr_page.php'">Proceed to Checkout</button> 
+			<button class="submit_btn" style="border-radius:10px" >Proceed to Checkout</button> 
 
 		</form> 
 	</div> 
 </body> 
 
 </html>
+<script>
+    let cart = localStorage.getItem("cart");
+    if (cart) {
+        cart = JSON.parse(cart);
+    } else {
+        cart = [];
+    }
+
+    function displayCartItems() {
+		const cartItemsProductID = document.getElementById("productID");
+		const cartItemsProductName = document.getElementById("productName");
+		const cartItemsProductImage = document.getElementById("productImage");
+        let totalItems = 0;
+        let totalPrice = 0;
+        cart.forEach(item => {
+            totalItems += parseInt(item.quantity);
+            totalPrice += parseInt(item.price) * parseInt(item.quantity);
+
+            cartItemsProductImage.value = item.image;
+			cartItemsProductName.value = item.name
+			cartItemsProductID.value = item.id
+        });
+
+        // Set hidden input values
+        document.getElementById('totalItems').value = totalItems;
+        document.getElementById('totalPrice').value = totalPrice;
+    }
+
+    function submitForm() {
+        displayCartItems(); // Update hidden input fields before submitting the form
+    }
+
+    // Call displayCartItems on page load to initialize hidden fields
+    displayCartItems();
+</script>
