@@ -102,7 +102,7 @@ else {
                 <span id="welcomeMessage">Welcome,<?php echo " $userName !"?></span>
                 <a href="./product_description/orders_list.php" class="profile-links">Orders History</a>
                 <a href="./product_description/cart.php" class="profile-links">Cart</a>
-                <a href="#" class="profile-links">Return</a>
+                <a href="./product_description/return_order.php" class="profile-links">Return</a>
                 <a class="profile-links" onclick="logout()" >Logout</a>
             </div>
           </div>
@@ -225,17 +225,17 @@ else {
         <!-- track order section -->
         <div class="track-order" >
           <div class="return-order-child"></div>
-          <button class="track-order-button" onclick="openRandomLink()">
-            <div class="track-order-item"></div>
-            <b class="track-order1">Track Order</b>
-          </button>
           
+          <form id="trackOrderForm">
+            <input type="text" id="track-order-input" placeholder="Enter your order ID" class="eg-312657432980" maxlength="9" required>
+            <button type="button" class="track-order-button" id="trackOrderButton">
+                <div class="track-order-item"></div>
+                <b class="track-order1">Track Order</b>
+            </button>
+          </form>
+
+          <div id="alertBox" class="alert hide">This is an alert message.</div>  
           <div class="track-order-inner"></div>
-
-          <div class="">
-            <input class="subscribe-us-child eg-312657432980" type="text" placeholder="e.g. 31rc5a8k0" id="track-order-input"  maxlength="9" required/>
-          </div>
-
           <div class="order-no-container">
             <span>Order Id. </span>
             <span class="span">*</span>
@@ -294,4 +294,39 @@ else {
     
   </body>
 </html>
-    
+        <!-- alert message -->
+        <script>
+          document.addEventListener('DOMContentLoaded', function() {
+            var form = document.getElementById('subscribed_form');
+            var alertBox = document.getElementById('alertBox');
+        
+            // Show the alert
+            function showAlert(message) {
+                alertBox.textContent = message;
+                alertBox.classList.remove('hide');
+                setTimeout(hideAlert, 3000); // Hide after 3 seconds (adjust as needed)
+            }
+        
+            // Hide the alert
+            function hideAlert() {
+                alertBox.classList.add('hide');
+            }
+        
+            // Add event listener to the form submit event
+            form.addEventListener('submit', function(event) {
+                // Check if the form is valid
+                if (!form.checkValidity()) {
+                    event.preventDefault(); // Prevent form submission if not valid
+                    form.reportValidity(); // Show validation messages
+                } else {
+                    event.preventDefault(); // Prevent form submission to show alert
+                    showAlert('We will notify you on the latest updates.');
+                    // After showing the alert, submit the form after a delay (adjust as needed)
+                    setTimeout(function() {
+                        form.submit();
+                    }, 3000); // Submit after 3 seconds (adjust as needed)
+                }
+            });
+        });
+        
+        </script>

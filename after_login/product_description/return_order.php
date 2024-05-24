@@ -13,6 +13,7 @@ else {
     exit;
 }
 ?>
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -22,7 +23,7 @@ else {
 
 
     <link rel="stylesheet" href="../../css/index-global.css" />
-    <link rel="stylesheet" href="../../css/product_description/orders_list.css" />
+    <link rel="stylesheet" href="../../css/product_description/return_order.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Mplus 1p:wght@400;500&display=swap" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500&display=swap"/>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM Serif Display:wght@400&display=swap"/>
@@ -124,7 +125,7 @@ else {
 
                 <div class="menu-items" >
                   
-                  <li id="back-arrow"><a href="./orders_list.php"
+                  <li id="back-arrow"><a href="./return_order.php"
                   
                   style="font-size: xx-large;" >➜</a></li>
                   <li><a href="../main.php" style="font-size: xx-large;"  >Home</a></li>
@@ -144,82 +145,24 @@ else {
           </div>   
       </button>
   </section>
-
-  <!-- cart section -->
-<section>
   <p class="back_button" onclick="back_button()" style="font-size: xx-large;transform:rotate(180deg);" >➜</p>
-  
-  <!-- shows all items in cart -->
-  <div id="cartItems"></div>
-  <div class="full_container_order_history">
-  <?php
-        include("../../php/db_connection.php");
-        $sql = "SELECT * FROM orders WHERE EmailAddress = '$userEmail'";
-        $result = $con->query($sql);
-        if ($result->num_rows > 0) {
-          while ($row = $result->fetch_assoc()) {
-            $statusClass = ($row["Status"] == "Active" || $row["Status"] == "Delivered" || $row["Status"] == "Returned") ? "status-active" : "status-inactive";
 
-                echo "            <div class='rounded'>";
-                echo "                <div class='table-responsive table-borderless'>";
-                echo "                    <table class='table'>";
-                echo "                        <thead>";
-                echo "                            <tr>";
-                echo "                                <th>Order Id</th>";
-                echo "                                <th>Product</th>";
-                echo "                                <th>Status</th>";
-                echo "                                <th>Items</th>";
-                echo "                                <th style='width:100px;'>Total</th>";
-                echo "                                <th class='th_date'>Date</th>";
-                echo "                                <th></th>";
-                echo "                            </tr>";
-                echo "                        </thead>";
-                echo "                        <tbody class='table-body'><br>";
-                echo "                            <tr class='cell-1'>";
-                echo "                                <td>".$row["orderID"]."</td>";
-                echo "                                <td>".$row["productName"]."</td>";
-                echo "                                <td><span class='badge  $statusClass'>".$row["Status"]."</span></td>";
-                echo "                                <td> ".$row["Items"]."</td>";
-                echo "                                <td>₹ ".$row["Total_Cost"]."</td>";
-                echo "                                <td>".$row["TimeStamp"]."</td>";
-                echo "                                <td><i class='fa fa-ellipsis-h text-black-50'></i></td>";
-                echo "                            </tr>";
-                echo "                        </tbody>";
-                echo "                    </table>";
-                echo "                </div>";
-                echo "            </div>";
+    <div class="container_return">
+        <div class="form-container">
+            <h2>Return Order</h2>
+            <p>Enter you Order ID to return your order( <i style="font-weight:600;font-size:medium">found in the outside of package box or in<a href="orders_list.php" style="text-decoration:none;color:blue;"> order history</a> section</i>)</p>
+            <form action="../../php/return.php" method="POST">
+                <label for="orderID">Order ID: <span style="color:red;">*</span></label><br>
+                <input type="text" id="orderID" name="orderID" placeholder="Enter your order ID" required>
+                <button type="submit" class="button_return" id="return_order_button">Return</button>
+            </form>
+            <div id="alertBox" class="alert hide">This is an alert message.</div> 
+        </div>
+    </div>
 
-          }
-      } else {
-          echo "<p  class='orders_details'>Empty.</p>";
-      }
-      $con->close();
-?>
-</div>
 
-    
-</section>
-    
-</body>
+  </body>
 </html>
-<script>
-        // get cart from localstorage
-        let cart = localStorage.getItem("cart");
-        if (cart) {
-            cart = JSON.parse(cart);
-        } else {
-            cart = [];
-        }
-
-
-        function displayID() {
-            
-        }
-
-        displayID();
-
-
-</script>
 <!-- back button -->
 <script>
   function back_button() {
@@ -227,8 +170,8 @@ else {
  
   }
 </script>
-    <!-- alert message -->
-    <script>
+      <!-- alert message -->
+      <script>
         var submitButton = document.getElementById('subscribe_successful_button');
         var form = document.getElementById('subscribed_form');
         var alertBox = document.getElementById('alertBox');
@@ -252,3 +195,4 @@ else {
 
 
     </script>
+

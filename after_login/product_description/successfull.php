@@ -117,3 +117,39 @@ else {
             }
         window.addEventListener("load", clearCart);
 </script>
+        <!-- alert message -->
+        <script>
+          document.addEventListener('DOMContentLoaded', function() {
+            var form = document.getElementById('subscribed_form');
+            var alertBox = document.getElementById('alertBox');
+        
+            // Show the alert
+            function showAlert(message) {
+                alertBox.textContent = message;
+                alertBox.classList.remove('hide');
+                setTimeout(hideAlert, 3000); // Hide after 3 seconds (adjust as needed)
+            }
+        
+            // Hide the alert
+            function hideAlert() {
+                alertBox.classList.add('hide');
+            }
+        
+            // Add event listener to the form submit event
+            form.addEventListener('submit', function(event) {
+                // Check if the form is valid
+                if (!form.checkValidity()) {
+                    event.preventDefault(); // Prevent form submission if not valid
+                    form.reportValidity(); // Show validation messages
+                } else {
+                    event.preventDefault(); // Prevent form submission to show alert
+                    showAlert('We will notify you on the latest updates.');
+                    // After showing the alert, submit the form after a delay (adjust as needed)
+                    setTimeout(function() {
+                        form.submit();
+                    }, 3000); // Submit after 3 seconds (adjust as needed)
+                }
+            });
+        });
+        
+        </script>

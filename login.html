@@ -46,12 +46,14 @@
 
 <div class="container" id="container">
     <div class="form-container sign-up-container">
-        <form id="signupForm" action="./php/sign_up.php" method="POST" onsubmit="return validateForm()">
+        <div id="alertBox" class="alert hide"></div>
+
+        <form id="signupForm" action="./php/sign_up.php" method="POST" onsubmit="return validateForm(event, 'signupForm')">
             <h1 style="top:-25px;">Create Account</h1><br><br>
             <span>Use your email for registration</span>
             <input type="text" placeholder="Name" name="username" required style="margin-top:25px;">
-            <input type="email" placeholder="Email" name="useremail" required style=>
-            <input type="password" placeholder="Password" name="userpass" required >
+            <input type="email" placeholder="Email" name="useremail" required>
+            <input type="password" placeholder="Password" name="userpass" required>
             <button type="submit" style="margin-top:25px;">Sign Up</button>
         </form>
     </div>
@@ -64,7 +66,7 @@
 			<input type="email" placeholder="Email" name="useremail" minlength="8" required/>
 			<input type="password" placeholder="Password" name="userpass" minlength="6" required/>
 			<br><br>
-			<a href="#">Forgot your password?</a>
+			<div></div>
 			<button id="login-button">Login</button>
 		</form>
 	</div>
@@ -88,6 +90,11 @@
 
 <!-- loading spinner -->
 <script src="./js/loading.js"></script>
+
+
+
+</body>
+</html>
 
 <script>
     function validateForm() {
@@ -127,6 +134,28 @@
         return true; 
     }
 </script>
+    <!-- alert message -->
+    <script>
+        var submitButton = document.getElementById('subscribe_successful_button');
+        var form = document.getElementById('subscribed_form');
+        var alertBox = document.getElementById('alertBox');
 
-</body>
-</html>
+        function showAlert(message) {
+            alertBox.textContent = message;
+            alertBox.classList.remove('hide');
+            setTimeout(hideAlert, 3000); // Hide after 3 seconds (adjust as needed)
+        }
+
+        function hideAlert() {
+            alertBox.classList.add('hide');
+        }
+
+        submitButton.addEventListener('click', function(event) {
+            event.preventDefault(); 
+            setTimeout(function() {
+                form.submit();
+            }, 2000); 
+        });
+
+
+    </script>

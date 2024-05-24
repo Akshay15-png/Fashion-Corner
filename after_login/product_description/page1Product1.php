@@ -106,7 +106,7 @@ else {
                 <span id="welcomeMessage">Welcome,<?php echo " $userName !"?></span>
                 <a href="./orders_list.php" class="profile-links">Orders History</a>
                 <a href="./cart.php" class="profile-links">Cart</a>
-                <a href="#" class="profile-links">Return</a>
+                <a href="./return_order.php" class="profile-links">Return</a>
                 <a class="profile-links" onclick="logout()" >Logout</a>
             </div>
           </div>
@@ -392,3 +392,20 @@ else {
         });
 </script>
 
+    <!-- alert message -->
+    <script>
+    function showAlert(message) {
+        var alertBox = document.createElement('div');
+        alertBox.classList.add('alert');
+        alertBox.textContent = message;
+        document.body.appendChild(alertBox);
+
+        setTimeout(function() {
+            alertBox.classList.add('hide');
+        }, 2000);
+    }
+
+    function cart_adding() {
+        showAlert('Item added to cart successfully!');
+    }
+</script>

@@ -104,7 +104,7 @@ else {
                 <span id="welcomeMessage">Welcome,<?php echo " $userName !"?></span>
                 <a href="./product_description/orders_list.php" class="profile-links">Orders History</a>
                 <a href="./product_description/cart.php" class="profile-links">Cart</a>
-                <a href="#" class="profile-links">Return</a>
+                <a href="./product_description/return_order.php" class="profile-links">Return</a>
                 <a class="profile-links" onclick="logout()" >Logout</a>
             </div>
           </div>
@@ -269,4 +269,3 @@ else {
     
   </body>
 </html>
-    

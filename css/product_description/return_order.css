@@ -6,7 +6,9 @@
       transform: scale(1);
     }
   }
-
+body{
+  overflow: hidden;
+}
   
   .logo-icon,
   .subscribe-child {
@@ -392,84 +394,65 @@ margin-right:1000px
     
   }
 
-body{
-  overflow-x: hidden;
-}
-.orders_details{
-    position: relative;
-    top: -3300px;
-    left: 400px;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    margin: 10px 10px 10px 10px;
-    font-weight: 700;
-    font-size: xx-large;
-}
-.order_details_id{
-    font-size: x-large;
-    font-weight: 800;
-}
-hr {
-    position: relative;
-    top: -3350px;
-    left: -170px;
-    border: none;
-    height: 1px; 
-    width: 800px;
-    background-color: #333; 
-}
-.status-active {
-    color: green;
-}
-.status-inactive {
-    color: red;
-}
 
 
 
-
-
-
-
-
-
-@import url('https://fonts.googleapis.com/css?family=Assistant');
-
-.rounded{
+.container_return {
   position: relative;
-  top:-3300px;
-  left:500px;
-  
-}
-table{
-  width: 800px;
+  top: -3250px;
+  left: 700px;
+  width: 100%;
+  max-width: 600px;
+  height: 400px;
+
+  /* background: #fff; */
+  padding: 20px;
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  border: 2px solid rgba(0, 0, 0, 0.1);
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-size: larger;
-  font-weight: 600;
-  
-}
-td{
-  padding: 10px 10px 10px 10px;
-  position: relative;
-  /* left: 20px; */
-  text-align: center;
-}
-.th_date{
-  width: 200px;
-  overflow: hidden;
-}
-.cell-1 {
-  border-collapse: separate;
-  border-spacing: 0 4em;
-  background: #fff;
-  border-bottom: 5px solid transparent;
-  /*background-color: gold;*/
-  background-clip: padding-box;
+  font-weight: 700;
 }
 
-thead {
-  background: #dddcdc;
+.form-container {
+  width: 100%;
 }
 
+h2 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  color: #555;
+}
+
+input[type="text"] {
+  width: 50%;
+  padding: 8px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: large;
+}
+
+.button_return {
+  width: 53%;
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.button_return:hover {
+  background-color: #0056b3;
+}
 
 /* customize alert */
 .alert {

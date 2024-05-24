@@ -18,7 +18,7 @@ $result = $con->query($checkQuery);
 
 if ($result->num_rows > 0) {
     // not inserting email
-    echo "<script>alert('Subscribed successfully');</script>";
+    
     echo "<script>window.location.href = '../women2.html';</script>"; 
     exit();
 }
@@ -28,7 +28,7 @@ $insertQuery = "INSERT INTO `subscribers` (`Email`, `Date/Time`) VALUES ('$userE
 
 if ($con->query($insertQuery) === TRUE) {
     sleep(1);
-    echo "<script>alert('Subscribed successfully');</script>";
+    
     echo "<script>window.location.href = '../women2.html';</script>"; 
     exit();
 } else {

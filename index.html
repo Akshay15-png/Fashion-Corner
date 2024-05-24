@@ -18,6 +18,7 @@
     <script src="./js/home-slider.js"></script>
     <script src="./js/clothes_click.js"></script>
     <script src="./js/loading.js"></script>
+    <script src="./js/alert.js"></script>
 
   <style>
     /* CSS styles for loading  */
@@ -195,11 +196,13 @@
             By subscribing, you agree to our Privacy Policy and consent to
             receive updates from us.
           </div>
-          
-          <form action="./php/subsribe.php" method="post">
+          <form action="./php/subsribe.php" method="post" id="subscribed_form">
             <input class="subscribe-us-child" name="useremail" type="text" placeholder="Enter your email" required/>
-            <button class="button "><div class="sign-up">Sign Up</div></button>
+            <button class="button" id="subscribe_successful_button" type="submit">
+              <div class="sign-up">Sign Up</div>
+          </button>
           </form>
+          <div id="alertBox" class="alert hide">This is an alert message.</div>
           
           <div class="join-our-mailing">
             Join our mailing list for the latest updates and promotions.
@@ -281,6 +284,42 @@
       }
     </script>
 
+        <!-- alert message -->
+        <script>
+          document.addEventListener('DOMContentLoaded', function() {
+            var form = document.getElementById('subscribed_form');
+            var alertBox = document.getElementById('alertBox');
+        
+            // Show the alert
+            function showAlert(message) {
+                alertBox.textContent = message;
+                alertBox.classList.remove('hide');
+                setTimeout(hideAlert, 3000); // Hide after 3 seconds (adjust as needed)
+            }
+        
+            // Hide the alert
+            function hideAlert() {
+                alertBox.classList.add('hide');
+            }
+        
+            // Add event listener to the form submit event
+            form.addEventListener('submit', function(event) {
+                // Check if the form is valid
+                if (!form.checkValidity()) {
+                    event.preventDefault(); // Prevent form submission if not valid
+                    form.reportValidity(); // Show validation messages
+                } else {
+                    event.preventDefault(); // Prevent form submission to show alert
+                    showAlert('We will notify you on the latest updates.');
+                    // After showing the alert, submit the form after a delay (adjust as needed)
+                    setTimeout(function() {
+                        form.submit();
+                    }, 3000); // Submit after 3 seconds (adjust as needed)
+                }
+            });
+        });
+        
+        </script>
   </body>
 </html>
     

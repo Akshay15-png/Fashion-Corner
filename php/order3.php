@@ -35,7 +35,7 @@ if ($result->num_rows > 0) {
     exit();
 }
 
-$insertQuery = "INSERT INTO `orders`(`orderID`,`FullName`, `EmailAddress`, `Address`, `City`, `State`, `PinCode`, `productID`, `productName`, `productImage`, `Items`, `Status`, `Total_Cost`, `Date/Time`) VALUES 
+$insertQuery = "INSERT INTO `orders`(`orderID`,`FullName`, `EmailAddress`, `Address`, `City`, `State`, `PinCode`, `productID`, `productName`, `productImage`, `Items`, `Status`, `Total_Cost`, `TimeStamp`) VALUES 
             ('$orderID','$fullName', '$emailAddress', '$address', '$city', '$state', '$pinCode', '$productID' , '$productName' , '$productImage' , '$totalItem' , 'Active' , '$totalCost' , current_timestamp())";
 
 if ($con->query($insertQuery) === TRUE) {

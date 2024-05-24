@@ -22,7 +22,6 @@ $result = $con->query($checkQuery);
 
 if ($result->num_rows > 0) {
     // not inserting data
-    echo "<script>alert('Booking Registered');</script>";
     echo "<script>window.location.href = '../after_login/main.php';</script>"; 
     exit();
 }
@@ -33,7 +32,6 @@ $insertQuery = "INSERT INTO `booking_details` (`Item`, `Description`, `Name`, `E
 
 if ($con->query($insertQuery) === TRUE) {
     sleep(1);
-    echo "<script>alert('Booking Registered');</script>";
     echo "<script>window.location.href = '../after_login/main.php';</script>"; 
     exit();
 } else {

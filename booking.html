@@ -56,8 +56,9 @@
 
     <div class="container">
         <h1>Booking Form - Fashion Corner</h1>
-        <form action="./php/booking.php" method="post" onsubmit="return validateForm(event)">
-            <div class="form-group">
+        <div id="alertBox" class="alert hide"></div>
+
+        <form action="./php/booking.php" method="post" id="subscribed_form" onsubmit="return validateForm(event)">
             <div class="form-group">
                 <label for="item">Select Item:</label>
                 <select id="item" name="item" required>
@@ -91,19 +92,32 @@
 </html>
 
 <script>
-    function validateForm(event) {
-        if (!event.target.checkValidity()) {
-            return false;
+        function validateForm(event) {
+            if (!event.target.checkValidity()) {
+                return false;
+            }
+            booked();
+            return false; // Prevent actual form submission to show the overlay and alert
         }
-        booked();
-        return true;
-    }
 
-    function booked() {
-        document.getElementById('loading-overlay').style.visibility = 'visible';
-        setTimeout(() => {
-            document.getElementById('loading-overlay').style.visibility = 'hidden';
-            alert('Booking Registered!');
-        }, 2000); 
-    }
-</script>
+        function booked() {
+            document.getElementById('loading-overlay').style.visibility = 'visible';
+            setTimeout(() => {
+                document.getElementById('loading-overlay').style.visibility = 'hidden';
+                showAlert('Booking Registered!');
+                document.getElementById('subscribed_form').submit(); // Submit the form after showing the alert
+            }, 2000);
+        }
+
+        function showAlert(message) {
+            const alertBox = document.getElementById('alertBox');
+            alertBox.textContent = message;
+            alertBox.classList.remove('hide');
+            setTimeout(hideAlert, 3000); // Hide after 3 seconds (adjust as needed)
+        }
+
+        function hideAlert() {
+            const alertBox = document.getElementById('alertBox');
+            alertBox.classList.add('hide');
+        }
+    </script>
